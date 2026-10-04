@@ -1,0 +1,26 @@
+# Theme for the IR search tool.
+#
+# One accent, calibrated for contrast (see docs/understanding/web-ui.md):
+#   - teal-700 #0f766e as the single accent (primaryColor)
+#   - slate neutrals for surfaces and text (no pure white / pure black)
+#   - base "light"; the Streamlit toolbar theme picker flips to dark, which uses
+#     the same accent on the framework's off-black surfaces. Both modes keep the
+#     accent and text hierarchy, so nothing inverts mid-page.
+#
+# white-on-teal button text     5.5:1  WCAG AA
+# teal as link text on white    5.5:1  WCAG AA
+# teal as link text on near-black 3.3:1  WCAG AA (UI minimum)
+
+[theme]
+base = "light"
+primaryColor = "#0f766e"
+backgroundColor = "#fafafa"
+secondaryBackgroundColor = "#f1f5f9"
+textColor = "#0f172a"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
