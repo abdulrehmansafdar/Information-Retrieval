@@ -1,0 +1,16 @@
+Title: Cross-Encoder Re-Ranking of Retrieved Passages
+Year: 2023
+Venue: European Conference on Information Retrieval
+
+## Abstract
+First stage retrieval is fast because it scores a document without reading it. A cross encoder scores the query and the passage together, which is far more accurate and far too slow to run over the whole corpus. This study measures how much accuracy is bought by re-ranking only the first fifty candidates, and we report where the gain per unit of time falls away.
+
+## Methodology
+The first stage retrieved two hundred candidates with term weights. The cross encoder consumed each query passage pair jointly and was trained on 100,000 labelled pairs. We re ranked the top fifty, the top one hundred and the top two hundred, and measured mean reciprocal rank and wall clock latency on the same hardware.
+
+We recorded how often each candidate's final position changed rather than only the resulting mean reciprocal rank, because a metric can improve while the improvements are concentrated on queries a user would never have seen. Latency was measured at batch sizes one, eight and thirty two to separate the arithmetic cost from the batching cost.
+
+## Results
+Re ranking the top fifty raised mean reciprocal rank from 0.58 to 0.72 while adding 180 milliseconds per query. Re ranking two hundred raised it only to 0.74 for six times the latency. Past rank fifty the candidates were almost never promoted, so the marginal return collapsed. Latency was dominated by batch size, not model size.
+
+Candidates ranked between fifty and two hundred changed position in only 4 percent of cases, which is the direct evidence that the extra latency bought almost nothing. Mean reciprocal rank improved on 38 of 50 queries and did not change on the remaining 12, so re-ranking never hurt in this configuration.

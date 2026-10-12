@@ -1,0 +1,129 @@
+# Relevance judgements for the week02 corpus of 20 research papers.
+#
+# Format
+#   <query_id> <paper_id> <0 or 1>
+#
+# A 1 means an assessor judged that paper to ANSWER that query. A 0 means an
+# assessor looked at it and judged that it does not. The 0s are the hard part
+# of a qrels file and the part most often left out; without them a system that
+# returns one paper and happens to be right scores 1.0, and recall and MAP are
+# simply undefined.
+#
+# A query text is given in a comment above each block.
+#
+# How these were judged
+#   Binary relevance, judged by hand against the title, abstract, methodology
+#   and results of each paper. A paper that USES a term in passing is not
+#   relevant to a query about that term: q07 asks about the evaluation metrics
+#   and p16 is marked 0 even though its results section reports "mean average
+#   precision", because p16 is about term weighting and merely borrows the
+#   metric to report its own numbers.
+#
+# What these judgements are NOT
+#   Twelve hand-made queries over twenty papers is a demonstration, not a
+#   benchmark. Nothing here supports a claim about which retrieval model is
+#   better in general. What it does support is "on these twelve queries, with
+#   these judgements, model X found more relevant papers than model Y".
+
+# q01 | proximity operator structured text
+q01 p04 1
+q01 p11 1
+q01 p10 0
+q01 p13 0
+q01 p16 0
+q01 p20 0
+q01 p02 0
+q01 p07 0
+
+# q02 | inverted index compression postings
+q02 p06 1
+q02 p11 1
+q02 p09 0
+q02 p13 0
+q02 p18 0
+q02 p03 0
+q02 p16 0
+
+# q03 | boolean retrieval
+q03 p10 1
+q03 p04 0
+q03 p06 0
+q03 p09 0
+q03 p13 0
+q03 p19 0
+
+# q04 | cross encoder reranking retrieved passages
+q04 p14 1
+q04 p17 1
+q04 p12 0
+q04 p10 0
+q04 p05 0
+q04 p20 0
+q04 p01 0
+
+# q05 | document index positions
+q05 p11 1
+q05 p06 1
+q05 p09 0
+q05 p16 0
+q05 p03 0
+q05 p18 0
+q05 p14 0
+
+# q06 | term weighting saturation length
+q06 p16 1
+q06 p06 0
+q06 p09 0
+q06 p19 0
+q06 p10 0
+q06 p03 0
+
+# q07 | mean average precision reciprocal rank
+q07 p09 1
+q07 p03 1
+q07 p10 0
+q07 p04 0
+q07 p19 0
+q07 p16 0
+q07 p20 0
+
+# q08 | learning to rank
+q08 p03 1
+q08 p10 0
+q08 p09 0
+q08 p15 0
+q08 p12 0
+q08 p18 0
+
+# q09 | anomaly detection clinical sensor
+q09 p07 1
+q09 p01 0
+q09 p13 0
+q09 p16 0
+q09 p19 0
+q09 p05 0
+
+# q10 | graph convolution recommendation
+q10 p08 1
+q10 p12 0
+q10 p15 0
+q10 p18 0
+q10 p03 0
+q10 p20 0
+
+# q11 | proximity window phrase query
+q11 p04 1
+q11 p11 1
+q11 p06 0
+q11 p14 0
+q11 p17 0
+q11 p16 0
+q11 p12 0
+
+# q12 | metadata structured field search
+q12 p19 1
+q12 p15 0
+q12 p09 0
+q12 p04 0
+q12 p10 0
+q12 p13 0

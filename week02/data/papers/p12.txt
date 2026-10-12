@@ -1,0 +1,16 @@
+Title: Language Models for Code Search
+Year: 2022
+Venue: Empirical Methods in Natural Language Programming
+
+## Abstract
+Code search is a retrieval task with an unusual property: the query is written in prose and the target is a program. We fine tune a transformer encoder on pairs of documentation strings and functions drawn from open source repositories, and we compare dense retrieval against lexical term matching on the same splits.
+
+## Methodology
+We sampled 1.8 million functions from twelve repositories with at least twenty stars. The model encoded the documentation string into a 768 dimension vector and the function body into the same space, trained with a contrastive objective and in batch negatives. Retrieval took the nearest encodings from an index of function vectors. Lexical matching used term weights over the tokenised body.
+
+Repositories were split by repository rather than by function, because splitting by function puts near duplicates on both sides and inflates every method. We also built a query set restricted to identifiers that appear in the query but never in the documentation, to isolate the case where a lexical method should win outright.
+
+## Results
+Dense retrieval reached mean reciprocal rank of 0.46 against 0.29 for lexical term matching. The advantage disappeared entirely when the query named an uncommon identifier, because the encoder had never seen it in prose. Combining both rankings recovered most of the gap. Repository language was the dominant factor in residual errors.
+
+On the identifier restricted query set, lexical matching actually beat the encoder by 0.08 mean reciprocal rank, confirming that the two methods fail on opposite queries. A reciprocal rank fusion of the two rankings beat either alone on every split.

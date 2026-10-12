@@ -1,0 +1,16 @@
+Title: Positional Indexes for Phrase Queries
+Year: 2020
+Venue: Information Systems Journal
+
+## Abstract
+A standard inverted index answers which documents contain a term. A positional index additionally records where, and that extra integer is what makes phrase retrieval possible. We measure the space cost of storing positions, we show the standard algorithm for intersecting two sorted position lists, and we identify the failure mode that causes a phrase query to silently return the wrong document.
+
+## Methodology
+For every posting we stored the term frequency and an ascending list of positions, both measured from the start of the document. A phrase of two terms is answered by walking the two position lists in step and keeping pairs whose difference equals one. We implemented the walk, the binary search variant, and a naïve nested loop, and timed all three on postings lists of increasing length.
+
+We also implemented three intersection operators beyond exact adjacency, namely a within window constraint of eight terms, a within sentence constraint and an unordered constraint that ignored order entirely, so that the cost of each could be compared on the same postings lists. Correctness was checked against a brute force scan over the original text for every posting list.
+
+## Results
+The merge walk ran in linear time in the length of the two position lists and beat the nested loop by a factor of 40 at one thousand postings. A binary search variant helped only when one list was far shorter than the other. The silent failure appears when positions are stored relative to the collection rather than to the document, which makes every phrase across a document boundary appear adjacent.
+
+Storing positions grew the index by 34 percent, less than the 71 percent we expected from our own corpus, because gap encoding recovered most of the cost. The within sentence operator was 3.1 times slower than the window operator and returned 9 percent fewer matches, so it was not worth its extra discrimination.

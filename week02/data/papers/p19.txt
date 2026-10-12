@@ -1,0 +1,16 @@
+Title: Metadata Quality and Structured Field Search
+Year: 2023
+Venue: Journal of Documentation
+
+## Abstract
+Searching a specific field instead of the whole record is the oldest structured search operation there is, and it is still the clearest way to raise precision. This study measures how field restriction changes recall and precision, and it separates two designs that are routinely confused: restricting the ranking to a field versus filtering the results to a field after ranking.
+
+## Methodology
+We indexed a repository of 50,000 reports with title, abstract, methodology and results fields. For every query we produced two result lists, one restricted to the abstract field and one filtered to the abstract field after a ranking over the whole record. We also built a weighted combination where each field contributed with its own weight to a single score.
+
+Field weights were set from editor supplied importance rather than tuned on the test queries, because tuning them on the same queries we then evaluate is how a field weighted model reports a number it has not earned. We also ran a third configuration that normalised each field by its own length, since a long abstract otherwise dominates purely by being long.
+
+## Results
+Field restriction raised precision at ten from 0.41 to 0.68 and lowered recall from 0.79 to 0.55. Filtering after ranking recovered the precision of restriction almost exactly and kept the full recall, but ranked the results as if the rest of the record still existed. Weighted field combination beat both at every weight setting we tried.
+
+Normalising each field by its own length raised precision at ten by 0.06 with no recall cost, which is a larger effect than any weight setting we found and costs nothing. Fields containing the term more often also tended to be longer, so the two effects are confounded unless the length normalisation is applied.

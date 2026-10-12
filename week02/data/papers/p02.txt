@@ -1,0 +1,16 @@
+Title: Neural Machine Translation with Low-Resource Languages
+Year: 2022
+Venue: Transactions on Computational Linguistics
+
+## Abstract
+Neural machine translation needs parallel corpora, and most languages do not have them. This paper studies transfer learning for translation between sixty languages that have fewer than ten thousand sentence pairs. We compare multilingual encoders, parameter sharing and back translation, and we find that a single shared encoder plus language specific output projections reaches most of the accuracy of a much larger multilingual model.
+
+## Methodology
+Each language was trained on its own small parallel corpus and then fine tuned on a combined multilingual batch. The model used attention over a recurrent decoder with eight layers and 512 hidden units. We regularised with dropout and label smoothing. Evaluation used bilingual evaluation understudy and reported both direction and language pair.
+
+To keep the comparison fair we fixed the sentence segmentation, the tokenisation and the evaluation script across all sixty languages, and we reported every configuration rather than only the best. Random seeds were varied three times per language and we report the mean, because a single run of a low resource language has a standard deviation of over half a BLEU point, which is larger than most of the differences we were trying to measure.
+
+## Results
+Transfer improved low resource accuracy by 3.1 BLEU on average and by 7.4 BLEU for the ten poorest languages. Back translation added a further 1.2 BLEU when the monolingual corpus was large enough. Models for languages written right to left degraded less than expected. Unseen scripts were the dominant source of catastrophic failure.
+
+Parameter sharing cut the parameter count by 61 percent and cost 0.4 BLEU against the unshared multilingual model, which we judged an excellent trade for deployment on a single GPU. The poorest ten languages improved most, which is the main argument for multilingual training rather than monolingual fine tuning.

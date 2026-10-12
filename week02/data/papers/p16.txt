@@ -1,0 +1,16 @@
+Title: Term Weighting: From TF to BM25
+Year: 2024
+Venue: International Journal of Information Retrieval
+
+## Abstract
+Every ranking function begins by deciding what a term is worth, and the history of term weighting is a history of disagreeing about that. We trace the progression from raw frequency, through a logarithmic frequency correction, to the saturation parameter and the length normalisation that modern ranking uses, and we show which historical problem each parameter was introduced to fix.
+
+## Methodology
+We compared six term weighting schemes over one fixed corpus and one fixed query set. Raw frequency counts occurrences and nothing else. A logarithmic scheme replaces the count with one plus its logarithm. A saturated scheme introduces a parameter that caps how much an extra occurrence can add. A length normalised scheme divides by a quantity derived from the mean document length. We measured mean average precision for every scheme and for every parameter value.
+
+The saturation parameter was swept from one tenth to twenty and the length normalisation parameter from zero to one, so that the contribution of each could be separated from the other rather than only measured in the combination that happens to be used in production. We also ran every scheme on a deliberately uniform corpus, where document lengths barely differ, to test whether length normalisation earns its keep there.
+
+## Results
+Term weight saturation was the single most valuable change, adding nine points of mean average precision over raw frequency. Length normalisation added a further seven points on a corpus with mixed document lengths and nothing at all on a near uniform corpus, which is why its value depends on the collection. Term weight is therefore not one number but a family, and the correct choice depends on how the collection is built.
+
+Saturation peaked at a parameter near 1.2 and declined slowly on either side, so the exact value matters less than whether saturation is applied at all. On the uniform corpus every length normalisation parameter scored identically, which is the cleanest demonstration that the length term is correcting a property of the collection rather than of the query.

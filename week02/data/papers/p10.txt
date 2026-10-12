@@ -1,0 +1,16 @@
+Title: Boolean Retrieval Revisited: A Practical Study
+Year: 2019
+Venue: SIGIR Record
+
+## Abstract
+Boolean retrieval is often dismissed as a historical curiosity, yet it remains the only model that can express must and must not. This study measures what users actually build when given Boolean operators over a real document collection, and it reports the proportion of queries that return nothing, return too much, or return a usable set.
+
+## Methodology
+We logged 12,000 queries from a production interface offering AND, OR and NOT with parentheses. For each query we recorded the parse tree, the number of matching documents and whether the user reformulated. We then re ran the same queries with a ranked model and compared the hit counts and the reformulation rate.
+
+Parentheses were logged separately from operators because a query such as A AND B OR C that a user intended as A AND (B OR C) is the single most common source of surprising Boolean results, and the log shows whether the parser or the user was responsible. We counted a reformulation as any query issued within sixty seconds of the previous one.
+
+## Results
+NOT appeared in 6 percent of queries and improved result precision in every case where it was used. Nineteen percent of Boolean queries returned zero documents, most often because the user required two terms that never co occur. Ranked retrieval answered 96 percent of the same queries with no reformulation. Neither model subsumes the other.
+
+Of the zero result queries, 61 percent were caused by parenthesisation rather than by the terms themselves, which is a usability problem rather than a modelling one. Boolean queries with three or more operators produced hit counts so wide that users reformulated anyway, which is the clearest signal that ranked retrieval is the right default.

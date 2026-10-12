@@ -1,0 +1,16 @@
+Title: Clustering Large Document Collections
+Year: 2019
+Venue: Knowledge and Information Systems
+
+## Abstract
+Grouping documents by topic sounds like a way to improve retrieval but rarely does, because a cluster is defined by the words a document shares, not by whether the document answers the query. We measure clustering on four collection sizes and report whether a two stage retrieve then cluster system ever beat a direct ranking model.
+
+## Methodology
+We clustered using spherical k means over term weight vectors, with k chosen by silhouette score on a held out sample. Cluster centroids were treated as pseudo documents and added to the candidate set. We compared two stage retrieval against direct retrieval using the same underlying model and the same number of candidates examined per query.
+
+We swept k from ten to two thousand at every collection size, because a k tuned on a small collection almost never transfers, and we report the best result achievable rather than the result at a convenient k. Clustering was rerun from several initialisations to separate the effect of the algorithm from the effect of a poor local optimum.
+
+## Results
+Two stage retrieval lost on every collection, and the gap widened with collection size. Cluster boundaries were the failure point: a document that spans two clusters inherited whichever centroid it happened to sit nearer. Centroid expansion helped only when queries were topical and vague. Direct retrieval had no such failure mode.
+
+Two stage retrieval never beat direct retrieval at any value of k, including the k chosen by silhouette score, which is a stronger result than a single operating point would have been. Clustering also cost eleven seconds per collection, which dominated the entire retrieval budget for collections above ten thousand documents.

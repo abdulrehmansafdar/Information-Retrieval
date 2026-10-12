@@ -1,0 +1,16 @@
+Title: Passage Retrieval for Open Domain Question Answering
+Year: 2023
+Venue: Transactions of the Association for Computational Linguistics
+
+## Abstract
+A question answering system that reads whole long documents wastes its budget on text that cannot contain the answer. Passage retrieval narrows a document to its best spanning window first, and this study measures the accuracy lost and gained by ranking passages instead of documents, including what happens when the correct passage is retrieved but ranked too low to be read.
+
+## Methodology
+We split every document into overlapping passages of 200 words with a 50 word stride. Passages were ranked by term weight and the best three per document were passed to the reader. We measured recall of the answer bearing passage at each cutoff, end to end answer accuracy, and the reader throughput in passages per second.
+
+Stride length was varied from fifty to two hundred words so that the cost of overlap could be measured rather than assumed, and we compared a fixed split against a split aligned to paragraph boundaries. A separate analysis isolated the passages that were retrieved at rank one to five but not read, since those represent budget spent and information lost at the same time.
+
+## Results
+Recall of the answer bearing passage at one was 0.71 against 0.68 for whole document retrieval, and at five it was 0.93 against 0.84. End to end accuracy improved by four points. Reader throughput rose from 9 to 24 passages per second, which mattered more than the accuracy gain. Overlapping strides recovered passages that a fixed split cut in half.
+
+Passages ranked between one and five but not read accounted for 14 percent of all answer failures, which is a larger loss than the accuracy the passage model gained. Aligning splits to paragraph boundaries raised recall at one by 0.05 at no extra cost, which is the cheapest improvement we found.
