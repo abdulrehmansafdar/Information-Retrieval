@@ -212,6 +212,14 @@ def main() -> int:
     is_("bm25f keeps all 10 papers", len(fq.weighted(
         "title:search AND results:precision").papers), 10)
 
+    print("\n== length normalisation is nearly a rescale (structured-fields.md) ==")
+    raw = fq.weighted("structured field search", normalise=False)
+    normalised = fq.weighted("structured field search", normalise=True)
+    ratios = [round(a.score / b.score, 2) for a, b in zip(raw.hits, normalised.hits)
+              if b.score]
+    is_("lowest raw/norm ratio", min(ratios), 1.35)
+    is_("highest raw/norm ratio", max(ratios), 1.66)
+
     print("\n== malformed field queries are refused (structured-fields.md) ==")
     for text, fragment in [("keywords:search", "not a field"),
                            ("title:search NOT results:x", "NOT is not supported"),

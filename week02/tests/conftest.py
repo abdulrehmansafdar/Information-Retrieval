@@ -25,6 +25,22 @@ if str(WEEK02) not in sys.path:
 import pytest
 
 
+# How many tests pytest actually collected, including every parametrised case.
+# Counting `def test_` in the source is wrong - a single parametrised function
+# can be twenty tests - so the number is taken from the collector itself.
+COLLECTED: list[int] = []
+
+
+def pytest_collection_modifyitems(session, config, items):
+    COLLECTED.append(len(items))
+
+
+@pytest.fixture(scope="session")
+def collected_count():
+    """The number of tests in this run. See pytest_collection_modifyitems."""
+    return COLLECTED[-1] if COLLECTED else -1
+
+
 @pytest.fixture(scope="session")
 def index():
     from structured_index import build_index

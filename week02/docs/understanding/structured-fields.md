@@ -116,7 +116,7 @@ return length / average if average else 1.0
 
 Without it, a results match scores higher purely by being long, and a weight of
 3.0 on the title does almost nothing. Measured effect on
-`structured field search`: raw scores run **1.5–1.7×** the normalised ones, and
+`structured field search`: raw scores run **1.35–1.66×** the normalised ones, and
 the multiplier is nearly constant — so on *this* corpus it mostly rescales
 rather than reorders. `fields.py:899` searches for a query where it does reorder
 and reports honestly when there is not one.
