@@ -1,0 +1,16 @@
+Title: COVID-19
+Specialty: Infectious Disease
+Code: U07
+Updated: 2025
+
+## Overview
+COVID-19 is an illness caused by the SARS-CoV-2 coronavirus. It spreads mainly through respiratory droplets and aerosols when people are close together for a period of time. Its severity ranges from no symptoms to critical pneumonia and multi-organ failure. Risk of severe disease rises with age and with conditions such as hypertension, diabetes, obesity, chronic lung disease and weakened immunity.
+
+## Symptoms
+Common symptoms include fever, dry cough, tiredness, loss of taste or smell, sore throat, headache and muscle aches. Breathlessness, chest pain, confusion and a persistently high temperature are warning signs that need urgent assessment. Some people have long-lasting symptoms after the acute illness, often called long COVID.
+
+## Diagnosis
+A PCR test on a swab detects the virus's genetic material and is the reference test. Rapid antigen tests give quicker results and are used at home and in clinics. Blood tests, oxygen saturation and a chest X-ray are used to judge how severely the lungs are affected.
+
+## Treatment
+Mild illness is managed at home with fluids, rest and fever relief. Antiviral tablets are given early to high-risk patients. Hospitalised patients may need oxygen, corticosteroids such as dexamethasone and, in severe cases, ventilation. Vaccination is the main way to reduce the risk of severe disease.

@@ -1,0 +1,16 @@
+Title: Query Expansion using Word Embeddings
+Year: 2023
+Venue: ACM Transactions on Information Systems
+
+## Abstract
+Vocabulary mismatch is the oldest failure in retrieval: the query uses a word the document never wrote. We test whether vector embeddings can generate expansion terms that improve recall without destroying precision. Expansion candidates come from the nearest neighbours of each query term, filtered by collection frequency, and we evaluate the tradeoff directly rather than assuming that more terms is better.
+
+## Methodology
+We embedded the corpus vocabulary with a skip gram model trained on the collection itself, so no external knowledge was used. For each query term we took the ten nearest neighbours and kept those whose document frequency fell between two and two hundred. We reran every query with expansion and measured recall, precision and mean reciprocal rank at the same cutoffs.
+
+Expansion candidates were added to the original query terms rather than replacing them, so an expansion could only ever add evidence and never remove the user's own words. We also ran a control in which the same number of candidates was drawn at random from the vocabulary, which is the only way to tell whether the embeddings are doing work or whether any extra terms would have helped.
+
+## Results
+Expansion raised recall at ten from 0.61 to 0.84 and mean reciprocal rank from 0.55 to 0.63. Precision at ten fell from 0.52 to 0.47, a real cost. Restricting candidates to document frequency below two hundred was the single most important filter. Embeddings trained on the target collection beat a general purpose model for every query length.
+
+The random control recovered 38 percent of the recall gain, which shows the remainder really came from the embeddings rather than from the extra terms. Removing expansion terms after the first 200 results improved precision at ten by 0.06 without hurting recall at ten, suggesting that expansion should be phased by rank.

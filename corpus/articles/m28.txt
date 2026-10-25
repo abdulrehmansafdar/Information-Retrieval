@@ -1,0 +1,16 @@
+Title: Osteoporosis
+Specialty: Musculoskeletal
+Code: M81
+Updated: 2024
+
+## Overview
+Osteoporosis is a condition in which the bones become thin, porous and weak, so they break more easily. It develops silently over years as bone is lost faster than it is replaced. Bone loss speeds up after the menopause because of falling oestrogen. Other risks include low body weight, smoking, heavy alcohol use, long-term steroid treatment, low vitamin D and a family history of fractures.
+
+## Symptoms
+Osteoporosis has no symptoms until a bone breaks. Fractures of the spine, hip and wrist are the most common. A spine fracture can cause sudden back pain, loss of height and a stooped posture. Many people only learn they have the condition after a fracture from a minor fall.
+
+## Diagnosis
+A DXA scan measures bone mineral density at the hip and spine and gives a T-score. A score of -2.5 or lower confirms osteoporosis. A fracture risk tool estimates the chance of a fracture in the next ten years, and it guides treatment for people with lower scores. Blood tests check calcium, vitamin D and kidney function.
+
+## Treatment
+Treatment includes calcium and vitamin D, regular weight-bearing exercise and falls prevention. Bisphosphonates such as alendronate slow bone loss and reduce fracture risk. Other medicines, including denosumab and teriparatide, are used for high-risk patients. Quitting smoking and limiting alcohol also help the bones.

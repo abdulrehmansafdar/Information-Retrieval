@@ -1,0 +1,16 @@
+Title: Peptic Ulcer Disease and Reflux
+Specialty: Gastroenterology
+Code: K27
+Updated: 2025
+
+## Overview
+A peptic ulcer is an open sore in the lining of the stomach or the first part of the small intestine. The two main causes are infection with the bacterium Helicobacter pylori and long-term use of non-steroidal anti-inflammatory drugs such as ibuprofen. Gastro-oesophageal reflux disease, or GERD, is a different condition in which stomach acid flows back into the food pipe, causing heartburn and irritation.
+
+## Symptoms
+An ulcer typically causes a burning or gnawing pain in the upper abdomen that may ease after food or be worse on an empty stomach. Bloating, nausea and loss of appetite are common. Black stools, vomiting blood or sudden severe pain are emergencies. GERD causes heartburn, a sour taste, regurgitation and discomfort after large meals.
+
+## Diagnosis
+A test for H. pylori, by breath, stool or blood, identifies the most common cause. An endoscopy looks directly at the stomach and oesophagus and takes samples when needed. Reflux may be assessed with a pH test or with a short trial of acid-lowering treatment.
+
+## Treatment
+Ulcers are healed with a proton pump inhibitor such as omeprazole and a course of antibiotics to clear H. pylori. Stopping the offending painkiller is essential. GERD is treated with acid-lowering tablets, smaller meals, weight loss and avoiding late eating. Surgery is rarely needed.

@@ -1,0 +1,16 @@
+Title: Anomaly Detection in Clinical Sensor Streams
+Year: 2022
+Venue: IEEE Journal of Biomedical and Health Informatics
+
+## Abstract
+Clinical sensors fail quietly. A drifting baseline or a stuck reading looks like a normal observation unless something flags it, and delayed detection has been linked to worse outcomes. We evaluate isolation forest, a long short term memory autoencoder and a simple threshold rule on three months of vital sign data, and we report both detection delay and the rate of false alarms that clinicians dismissed.
+
+## Methodology
+Data came from four hundred patients monitored continuously, giving 2.1 million readings across six signals. We trained on the first month and tested on the last two, keeping the test period strictly later in time. The autoencoder was trained on windows of 128 readings with a reconstruction error threshold set at the ninety fifth percentile of training error.
+
+Faults were injected at realistic rates rather than fabricated at random, because a randomly positioned fault is trivially detectable and tells us nothing about clinical use. We asked three clinicians to review every alarm the system raised and marked each one as actionable or dismissed, and we report the dismissed rate as a separate number from the false positive rate, since a dismissed alarm that was physiologically real is a different problem entirely.
+
+## Results
+The autoencoder detected 91 percent of injected faults with a median delay of 42 seconds, against 74 percent and 6 minutes for isolation forest. The threshold rule produced the fewest false alarms but missed every gradual drift. Respiratory signal noise was the dominant false alarm source and was partly removable with a median filter.
+
+Nurse review showed 38 percent of alarms were dismissed as noise, far above the false positive rate the statistical metric reported, which is the argument for human review rather than automatic action. Raising the threshold from the ninety fifth to the ninety ninth percentile halved alarms and cost 6 percent recall.

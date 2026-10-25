@@ -1,0 +1,22 @@
+# Theme for the Week 6 fuzzy search app.
+#
+# Neutral off-white base (no warm/yellow cast), near-black text, one teal accent.
+# Cards are white on the off-white, so they lift without a heavy shadow. The
+# accent is the same teal as weeks 1 and 2; the domain hues are applied in app.py.
+#
+# near-black on off-white        15.9:1  WCAG AAA
+# white-on-teal button text       5.5:1  WCAG AA
+
+[theme]
+base = "light"
+primaryColor = "#0f766e"
+backgroundColor = "#FAFAF9"
+secondaryBackgroundColor = "#F1F1EF"
+textColor = "#1A1A1A"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

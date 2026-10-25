@@ -1,0 +1,16 @@
+Title: User Interfaces for Ranked Result Lists
+Year: 2024
+Venue: International Journal of Human Computer Studies
+
+## Abstract
+A ranked list is an argument about what matters, presented in an order the user did not choose. We tested three presentations of the same ranking, one plain list, one list annotated with the score, and one list annotated with the matched query terms, and we measured whether any presentation changed what users believed about the results.
+
+## Methodology
+Forty participants judged forty queries against the same ranked lists shown three ways. We recorded which result was selected, whether the participant opened the second page of results, and a confidence rating taken after each query. The ranking itself never changed, only its presentation.
+
+Presentation was rotated across queries so that each participant saw every condition and no participant was stuck with one. Confidence was collected after the selection rather than before, to avoid anchoring the choice, and we checked that the score values shown were the true values from the ranking function rather than rounded for display.
+
+## Results
+Showing matched terms raised result clicks by 18 percent and lowered the confidence rating, which suggests users learned something rather than simply scrolling faster. Showing raw scores alone had no measurable effect and made some users distrust small differences. Fewer than nine percent of participants ever reached a second page, so the top ten is effectively the whole ranking. Score display changed confidence but not selection.
+
+Participants who saw matched terms rewrote their queries more often, which is the behaviour a designer would want. Displaying scores to two decimal places produced visible differences that were smaller than the ranking granularity, so rounding to one decimal would have removed noise without changing the ordering.

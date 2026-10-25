@@ -1,0 +1,16 @@
+Title: Iron-Deficiency Anaemia
+Specialty: Haematology
+Code: D50
+Updated: 2025
+
+## Overview
+Iron-deficiency anaemia is the most common cause of anaemia worldwide. It happens when the body does not have enough iron to make haemoglobin, the protein in red blood cells that carries oxygen. Common causes are blood loss, most often from the gut or heavy periods, poor absorption, pregnancy and a diet low in iron. In adults, a cause should always be sought, because iron loss can be a sign of bowel disease or cancer.
+
+## Symptoms
+Anaemia causes tiredness, weakness, breathlessness on exertion, dizziness and pale skin. Some people feel a fast heartbeat or have headaches. Less common signs include brittle nails, cravings for ice or starch, and sore tongue. Symptoms develop slowly, so people often adapt without noticing them.
+
+## Diagnosis
+A full blood count shows a low haemoglobin level and small, pale red cells. A ferritin test measures iron stores and is the most useful single test. Doctors look for the cause through a history of bleeding, diet and bowel symptoms, and they may arrange a stool test, endoscopy or a colonoscopy.
+
+## Treatment
+Treatment replaces the iron. Oral iron tablets, taken every day or on alternate days, are the first choice, and they work best on an empty stomach. Intravenous iron is used when tablets are not tolerated or absorbed. The underlying cause is treated at the same time. Haemoglobin is checked after a few weeks to confirm the response.

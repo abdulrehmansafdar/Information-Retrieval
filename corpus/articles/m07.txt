@@ -1,0 +1,16 @@
+Title: Hypothyroidism
+Specialty: Endocrinology
+Code: E03
+Updated: 2025
+
+## Overview
+Hypothyroidism is a condition in which the thyroid gland makes too little thyroid hormone. The hormone sets the pace of the body's metabolism, so a shortage slows many functions down. The most common cause is an autoimmune disease called Hashimoto thyroiditis. It is more common in women and in older adults, and it can be treated well with daily medicine.
+
+## Symptoms
+Symptoms develop slowly. Common signs include tiredness, weight gain, feeling cold, constipation, dry skin, hair loss and low mood. In older people the signs can be subtle and are easy to mistake for ageing. Severe untreated hypothyroidism can slow the heart and affect memory.
+
+## Diagnosis
+A blood test for thyroid-stimulating hormone (TSH) is the main test. A high TSH with a low free thyroxine level confirms the diagnosis. Doctors may also check for thyroid antibodies to find the cause, and they check cholesterol, because an underactive thyroid raises it.
+
+## Treatment
+Treatment is levothyroxine, a synthetic form of the thyroid hormone, taken once a day on an empty stomach. The dose is adjusted until the TSH is within the normal range. Blood tests are repeated every few months at first and then yearly. Most people need the tablet for life, and symptoms usually improve within a few weeks.

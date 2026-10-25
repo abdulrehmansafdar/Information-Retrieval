@@ -1,0 +1,16 @@
+Title: Graph Neural Networks for Recommendation
+Year: 2020
+Venue: Proceedings of the Conference on Recommender Systems
+
+## Abstract
+Collaborative filtering treats a user item interaction table as a dense matrix, but real interaction tables are sparse and heavily skewed. We recast recommendation as node classification on a user item graph and measure whether message passing over neighbourhoods recovers accuracy that pure matrix factorisation loses on sparse users. We report accuracy separately for cold start and long tail items rather than one average number.
+
+## Methodology
+The graph had 400,000 user nodes and 90,000 item nodes joined by 3 million observed interactions. Each node received features from its content plus a random projection of its interaction row. We used three layers of graph convolution with mean aggregation and dropout on the edges. Negative sampling produced 50 negatives per positive during training.
+
+Evaluation used a leave one out protocol that mimics the real serving case, since a random split leaks future interactions into the training set and inflates every graph method. Users were bucketed into five interaction count bands before evaluation and every headline number was reported per band, because an average across bands is dominated by the heaviest users.
+
+## Results
+Graph convolution improved recall at twenty from 0.58 to 0.66 for users with fewer than fifty interactions. For heavy users matrix factorisation remained slightly ahead. Three layers beat one and two on every split, and five layers overfit. Item cold start was essentially unhelped, which limits the practical value of the whole approach.
+
+Message passing cost 31 milliseconds per user against 2 milliseconds for matrix factorisation, so the accuracy gain has to be paid for at serving time. Users in the lightest band gained 14 recall points while the heaviest band lost 2, which is a distribution shift rather than an overall improvement.

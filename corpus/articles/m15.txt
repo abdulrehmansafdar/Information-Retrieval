@@ -1,0 +1,16 @@
+Title: Typhoid Fever
+Specialty: Infectious Disease
+Code: A01
+Updated: 2024
+
+## Overview
+Typhoid fever is a bacterial infection caused by Salmonella Typhi. It spreads through food or water contaminated with the faeces or urine of an infected person. It is common where clean water and sanitation are limited. Some people become long-term carriers and can pass the bacteria on without being ill themselves.
+
+## Symptoms
+Fever rises slowly over several days and can reach a high level. Other signs include headache, weakness, loss of appetite, stomach pain, constipation or diarrhoea, and a rash of small pink spots. Without treatment, the illness can last weeks and lead to serious complications such as bowel perforation.
+
+## Diagnosis
+A blood culture is the most reliable test, although it can miss some cases. A stool or bone marrow culture may be used. Because many illnesses cause a similar fever, a clinician also considers the travel history, the local disease pattern and the results of a full blood count.
+
+## Treatment
+Typhoid is treated with antibiotics such as azithromycin, ceftriaxone or, where resistance is low, ciprofloxacin. Fever and dehydration are managed with fluids and paracetamol. Hospital care is needed for complications. Vaccination, safe drinking water, handwashing and careful food handling are the main protection.

@@ -1,0 +1,16 @@
+Title: Stroke
+Specialty: Neurology
+Code: I63
+Updated: 2025
+
+## Overview
+A stroke happens when the blood supply to part of the brain is cut off. An ischaemic stroke, the most common type, is caused by a blocked artery, often a clot that formed in the heart or in a narrowed artery. A haemorrhagic stroke is caused by a burst blood vessel. Hypertension is the largest single risk factor, and atrial fibrillation, diabetes, smoking and high cholesterol add to it. Brain cells begin to die within minutes, so speed matters.
+
+## Symptoms
+Typical signs appear suddenly: weakness or numbness on one side of the body, a drooping face, slurred speech, confusion, trouble seeing and loss of balance. The FAST test, which checks face, arms, speech and time, is used to recognise a stroke and call for help at once.
+
+## Diagnosis
+A CT scan of the head is done quickly to tell an ischaemic stroke from a haemorrhage. An MRI scan shows smaller strokes more clearly. Blood tests check blood sugar and clotting, and an ECG and heart ultrasound look for the source of clots.
+
+## Treatment
+An ischaemic stroke can be treated with clot-dissolving medicine given within a few hours, or with a procedure that removes the clot from the artery. Antiplatelet drugs or anticoagulants prevent a second stroke. Blood pressure, cholesterol and diabetes are controlled in the long term. Rehabilitation with physiotherapy, speech therapy and occupational therapy helps recovery.

@@ -1,0 +1,16 @@
+Title: Distributed Search Systems at Web Scale
+Year: 2022
+Venue: IEEE Transactions on Knowledge and Data Engineering
+
+## Abstract
+Serving a search index that fits in memory on one machine stopped being possible well before the index itself became interesting. This study reports the architecture of a distributed search system built on thirty machines, and it focuses on the two operations that dominate latency at scale: routing a query to the right shard, and merging shard results into one ranked list.
+
+## Methodology
+Documents were partitioned by term so that every posting list lived on exactly one machine, which makes ranking require a broadcast of the query to every shard. Each shard returned its top candidates with scores, and a coordinating node merged them. We varied shard count from 4 to 64 and measured tail latency at the ninety ninth percentile rather than the mean.
+
+A second deployment partitioned by document instead, so that every posting list was scattered and every query touched every shard. Comparing the two partitions separates the cost of the broadcast from the cost of the merge, which a single architecture cannot do. Network latency between machines was measured independently so that it could be subtracted.
+
+## Results
+Ninety ninth percentile latency grew linearly with shard count once the coordinating node became the bottleneck, reaching 780 milliseconds at 64 shards. Merging partial results was cheap relative to the broadcast. Caching the query at each shard removed 40 percent of latency for repeated head queries. Replication for availability doubled storage and did not reduce tail latency at all.
+
+The document partitioned deployment was 2.7 times slower at the same shard count, confirming that the term partition is the load bearing decision rather than the hardware. Mean latency stayed flat at 90 milliseconds while the ninety ninth percentile tripled, which is the argument for reporting the tail at all.

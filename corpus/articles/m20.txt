@@ -1,0 +1,16 @@
+Title: Epilepsy
+Specialty: Neurology
+Code: G40
+Updated: 2025
+
+## Overview
+Epilepsy is a neurological condition in which the brain produces repeated seizures without an obvious trigger. A seizure is a sudden burst of abnormal electrical activity in the brain. Epilepsy can start at any age and has many causes, including head injury, stroke, infection, brain tumours, genetic factors and, in many cases, no identifiable cause. A single seizure does not always mean epilepsy.
+
+## Symptoms
+Seizures vary widely. Some cause brief staring spells or twitching in one part of the body. Others cause loss of consciousness, stiffening and jerking of the whole body, followed by confusion and tiredness. Many people feel warning signs, such as an unusual smell or a sense of unease, shortly before a seizure.
+
+## Diagnosis
+An electroencephalogram (EEG) records the brain's electrical activity and can show the pattern typical of epilepsy. An MRI scan of the brain looks for structural causes. Blood tests check for infection, sugar and sodium levels, and a detailed history from a witness is often the most useful information.
+
+## Treatment
+Most people are controlled with an antiseizure medicine such as levetiracetam, sodium valproate or lamotrigine. The dose is adjusted to stop seizures with the fewest side effects. Women who may become pregnant need specialist advice, because some medicines carry risk. Surgery or a nerve stimulator is considered when medicines do not work. Driving restrictions apply until seizures are controlled.

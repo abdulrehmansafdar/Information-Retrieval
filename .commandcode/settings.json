@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(bun:*)",
+      "Shell(node --version)",
+      "Shell(npm:*)",
+      "Shell(cmd:*)",
+      "Shell(where:*)",
+      "Shell(more:*)",
+      "Shell(findstr:*)",
+      "Shell(type:*)",
+      "powershell",
+      "Shell(.venvScriptspython.exe:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

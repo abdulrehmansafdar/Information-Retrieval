@@ -1,0 +1,16 @@
+Title: Rheumatoid Arthritis
+Specialty: Musculoskeletal
+Code: M06
+Updated: 2025
+
+## Overview
+Rheumatoid arthritis is a long-term autoimmune disease in which the immune system attacks the lining of the joints. The inflammation causes pain, swelling and, over time, damage to cartilage and bone. It usually affects the small joints of the hands and feet, and it is symmetrical, meaning both sides of the body are involved. It is more common in women and often starts between the ages of 30 and 60. Smoking is a risk factor.
+
+## Symptoms
+Typical signs are swollen, warm and tender joints, and morning stiffness that lasts more than thirty minutes. Tiredness, low fever and loss of appetite are common. Without early treatment, joints may become deformed and the person may lose the use of their hands.
+
+## Diagnosis
+Blood tests look for inflammation, usually a raised C-reactive protein and erythrocyte sedimentation rate, and for antibodies such as rheumatoid factor and anti-CCP. X-rays and ultrasound scans show early joint erosion. Early referral to a specialist is important, because treatment works best when it starts soon after the first symptoms.
+
+## Treatment
+Disease-modifying drugs, most often methotrexate, are started early to stop joint damage. Other treatments include hydroxychloroquine, sulfasalazine, steroid tablets for short periods, and biological drugs that block specific inflammatory signals. Physiotherapy, splints and a healthy diet support joint function. Regular blood tests check for side effects of these medicines.

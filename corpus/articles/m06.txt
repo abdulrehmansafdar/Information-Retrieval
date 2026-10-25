@@ -1,0 +1,16 @@
+Title: Type 2 Diabetes
+Specialty: Endocrinology
+Code: E11
+Updated: 2025
+
+## Overview
+Type 2 diabetes is a long-term condition in which the body becomes resistant to insulin and the pancreas gradually fails to produce enough of it. Glucose therefore stays high in the blood. It is strongly linked to excess body weight, inactivity, age, family history and ethnic background. It is the most common form of diabetes, and many people live with it for years before diagnosis.
+
+## Symptoms
+Many people have no symptoms at first. Others notice tiredness, thirst, passing more urine, slow healing of cuts and blurred vision. Because the condition develops gradually, it is often found during a routine blood test rather than after a crisis.
+
+## Diagnosis
+Diagnosis is made by a fasting glucose test, a random glucose test or an HbA1c test that reflects the average over about three months. Two abnormal results, or one result with symptoms, confirm the diagnosis. Doctors also check blood pressure, cholesterol and kidney function, because these carry the same heart and kidney risks as hypertension.
+
+## Treatment
+The first step is diet, weight loss and regular activity. Metformin is usually the first medicine. Other tablets such as SGLT2 inhibitors and GLP-1 agonists lower glucose and protect the heart and kidneys. Insulin is added when tablets are no longer enough, and some patients need insulin from the start. Blood pressure and cholesterol are treated alongside glucose, because heart disease is the main threat.

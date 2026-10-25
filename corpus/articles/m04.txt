@@ -1,0 +1,16 @@
+Title: Atrial Fibrillation
+Specialty: Cardiology
+Code: I48
+Updated: 2024
+
+## Overview
+Atrial fibrillation is an irregular and often rapid heart rhythm in which the two upper chambers of the heart quiver instead of beating in a coordinated way. It is the most common sustained heart rhythm disorder. Its main danger is that blood pools in the atria and can form clots, which may travel to the brain and cause a stroke.
+
+## Symptoms
+Some people feel palpitations, a racing or pounding heartbeat, or an irregular rhythm. Others feel breathless, tired, dizzy or have chest discomfort. Many people with atrial fibrillation have no symptoms at all and are found during a routine check.
+
+## Diagnosis
+An ECG confirms the rhythm. Because episodes can come and go, a patch or a wearable monitor may be used over days or weeks. Blood tests check thyroid function and kidney function, and an echocardiogram looks for underlying heart disease or valve problems.
+
+## Treatment
+Treatment has three aims: control the heart rate, restore a normal rhythm where possible, and prevent stroke. Beta blockers or calcium channel blockers slow the rate. Anticoagulants such as apixaban or warfarin reduce the risk of clots, and a stroke risk score guides who needs them. Procedures such as catheter ablation are considered for selected patients.

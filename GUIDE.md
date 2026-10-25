@@ -1,15 +1,38 @@
 # GUIDE — running this project, and checking by hand that it is right
 
-This repository holds two independent Information Retrieval modules.
+This repository holds three independent Information Retrieval modules.
 
 | | what it is | where |
 |---|---|---|
 | **Week 1** | preprocessing, inverted index, boolean AND, TF-IDF, cosine / VSM, with a Streamlit UI | `week01/` |
 | **Week 2** | positional index, BIM, BM25, BM25F, overlapped / non-overlapped lists, the proximal node model, and an effectiveness evaluation, on its own 20-paper corpus | `week02/` |
+| **Week 3** | browsing / navigation architecture: a home page, a derived category hierarchy, document lists, search + browse, breadcrumbs, related-document links and document preview, over the same 20-paper collection | `week03/` |
+| **Week 6** | fuzzy search and the extended Boolean model over the **shared medical corpus** in `corpus/` (30 clinical articles): membership functions, partial matching, fuzzy and p-norm AND / OR / NOT, a query parser, and ranked results | `week06/` |
 
 Week 2 is **self-contained**. It does not import week 1. Week 1 is kept as the
 baseline it grew out of, and week 2 re-implements its boolean and TF-IDF models
 so the evaluation can compare them on equal terms.
+
+Week 3 is **self-contained** too: it imports no week02 code and ships its own copy
+of the collection under `week03/data/papers`. It turns that collection into a
+navigation architecture, covering all three browsing models of the week 5
+lecture — **flat**, **structured guided** and **hypertext**.
+
+Week 6 is the first module that does **not** keep its own data. Its articles are
+read from the one shared corpus at `corpus/articles`, which every module from week 6
+onward uses, so nothing is copied from week to week. The corpus is 30 clinical
+knowledge articles, the kind a hospital ERP's clinical module would hold; `corpus/README.md`
+gives the file format. Week 6 implements the fuzzy and extended Boolean models of
+the week 6 lecture: membership values between 0 and 1, partial matching, fuzzy and
+p-norm AND / OR / NOT, a query parser, and ranked results, with a web UI and a console UI.
+
+The seven minimum requirements are all present: a **home page**, a **category
+hierarchy**, a **document list**, a **search + browse** option, **breadcrumb**
+navigation, **related document** links and a **document preview**, plus filters
+and a navigation history.
+
+For a guided walk-through of each app aimed at a viva — what to click, what you
+should see, and what to say — see `VIVA-GUIDE.md`.
 
 ---
 
@@ -73,8 +96,9 @@ The nine modes are `boolean`, `tfidf`, `bim`, `bm25`, `fields`, `bm25f`,
 .\.venv\Scripts\python.exe week02\main.py --web
 ```
 
-Opens six tabs: **Search**, **Fields & Lists**, **Proximity**, **Evaluation**,
-**Corpus**, **Pipeline**.
+Opens seven tabs: **Start here**, **Search**, **Fields & Lists**, **Proximity**,
+**Evaluation**, **Corpus**, **Pipeline**. The *Start here* tab is a plain-English
+guide to the rest.
 
 ### Week 1
 
@@ -82,6 +106,69 @@ Opens six tabs: **Search**, **Fields & Lists**, **Proximity**, **Evaluation**,
 .\.venv\Scripts\python.exe week01\main.py --console
 .\.venv\Scripts\python.exe -m streamlit run week01\app.py
 ```
+
+### Week 3 — console
+
+```powershell
+.\.venv\Scripts\python.exe week03\main.py --console                    # interactive browser
+.\.venv\Scripts\python.exe week03\main.py --console --home            # the home page
+.\.venv\Scripts\python.exe week03\main.py --console --tree            # the category hierarchy
+.\.venv\Scripts\python.exe week03\main.py --console --find "proximity window"
+.\.venv\Scripts\python.exe week03\main.py --console --doc p04         # one document preview
+.\.venv\Scripts\python.exe week03\main.py --console --graph           # H = (N, L)
+```
+
+Inside the interactive browser:
+
+| type | effect |
+|---|---|
+| `home` / `tree` | the home page / the category hierarchy |
+| `cd root/ir` / `up` | move down into a category / back up |
+| `ls` | the documents under the current category |
+| `open p04` / `preview p04` | the document page: sections and links |
+| `find <query>` | search the collection |
+| `filter year=2021` / `clearfilters` | set and drop facets |
+| `related p04` / `links p04` | a document's related links / all its out-links |
+| `path p01 p18` | shortest navigation path between two documents |
+| `graph` / `models` / `stats` | node and link counts / the three browsing models / corpus summary |
+| `history` / `back` / `forward` / `recent` | the navigation trail |
+| `help` / `quit` | the command list / exit |
+
+### Week 3 — web UI
+
+```powershell
+.\.venv\Scripts\python.exe week03\main.py --web
+```
+
+Opens on **Start here**, with seven sections chosen from the bar at the top:
+**Start here**, **Home**, **Browse**, **Search**, **Document**, **Hypertext**,
+**History**. The *Start here* section walks through all seven minimum
+requirements in order. Filters and the back/forward buttons are in the sidebar.
+
+### Week 6 — console
+
+```powershell
+.\.venv\Scripts\python.exe week06\main.py --console                                        # type queries at a prompt
+.\.venv\Scripts\python.exe week06\main.py --console --query "hypertenion" --explain        # a typo, with the working
+.\.venv\Scripts\python.exe week06\main.py --console --query "hypertension AND NOT diabetes" --mode extended
+.\.venv\Scripts\python.exe week06\main.py --console --query "asthma OR COPD" --compare     # all three models
+.\.venv\Scripts\python.exe week06\main.py --console --membership hypertension              # mu under 3 functions
+.\.venv\Scripts\python.exe week06\main.py --console --sets diabetes hypertension kidney    # (A or B) minus C
+```
+
+At the prompt, type a query and press Enter; `quit` leaves. The model is chosen with
+`--mode boolean|fuzzy|extended`. The other settings are `--function binary|linear|log`,
+`--no-partial`, `--p 1|2|inf` and `--alpha`.
+
+### Week 6 — web UI
+
+```powershell
+.\.venv\Scripts\python.exe week06\main.py --web
+```
+
+Opens on **Start here**, with six sections chosen from the bar at the top:
+**Start here**, **Search**, **Compare**, **Membership**, **Set view**, **Articles**.
+The three example buttons on *Start here* fill the search box and open **Search**.
 
 ### The individual modules
 
@@ -106,35 +193,68 @@ cd week02
 
 ## 3. Verifying it automatically
 
-Run all four from the repository root. Every one must pass.
+Run all of these from the repository root. Every one must pass. (The commands
+that `cd` into a folder `cd ..` back to the root afterwards.)
 
 ```powershell
 .\.venv\Scripts\python.exe week02\verify.py
+.\.venv\Scripts\python.exe week03\verify.py
 .\.venv\Scripts\python.exe -m pytest
 .\.venv\Scripts\python.exe week02\check_doc_lines.py
 .\.venv\Scripts\python.exe week02\check_doc_claims.py
+.\.venv\Scripts\python.exe week03\check_doc_lines.py
+.\.venv\Scripts\python.exe week03\check_doc_claims.py
+.\.venv\Scripts\python.exe week06\verify.py
+.\.venv\Scripts\python.exe week06\check_doc_lines.py
+.\.venv\Scripts\python.exe week06\check_doc_claims.py
 ```
 
 What each one covers:
 
 | command | checks | expected last line |
 |---|---|---|
-| `week02\verify.py` | corpus shape, index invariants, every mode answers, error paths, BM25 ≡ BIM, evaluation sanity, **and both doc checkers** | `all checks passed` |
-| `-m pytest` | 266 tests across 7 files | `266 passed` |
-| `week02\check_doc_lines.py` | 74 `file.py:NN` references cited in the docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
-| `week02\check_doc_claims.py` | re-derives every number quoted in the docs from the corpus | `every number in the docs is still true` |
+| `week02\verify.py` | corpus shape, index invariants, every mode answers, error paths, BM25 ≡ BIM, evaluation sanity, **and both week02 doc checkers** | `all checks passed` |
+| `week03\verify.py` | the collection loads, the derived taxonomy partitions it, the graph's node and link counts, the search contract, the navigation state, **and both week03 doc checkers** | `all checks passed` |
+| `week06\verify.py` | the shared corpus, membership values between 0 and 1, partial matching, the query language, the operators against the lecture's numbers, the three modes, the set identity on the corpus, **and both week06 doc checkers** | `all checks passed` |
+| `-m pytest` | 549 tests across 19 files | `549 passed` |
+| `week02\check_doc_lines.py` | 74 `file.py:NN` references cited in the week02 docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
+| `week02\check_doc_claims.py` | re-derives every number quoted in the week02 docs from the corpus | `every number in the docs is still true` |
+| `week03\check_doc_lines.py` | 20 `file.py:NN` references cited in the week03 docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
+| `week03\check_doc_claims.py` | re-derives every number quoted in the week03 docs from the corpus | `every number in the docs is still true` |
+| `week06\check_doc_lines.py` | 12 `file.py:NN` references cited in the week06 docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
+| `week06\check_doc_claims.py` | re-derives every number quoted in the week06 docs from the shared corpus | `every quoted number matches the code` |
 
-Plus the UI, which cannot be checked from `verify.py`:
+Plus the UIs, which cannot be checked from `verify.py`:
 
 ```powershell
 cd week02
 ..\.venv\Scripts\python.exe apptest_smoke.py      # every tab, mode and error path
 cd ..
+cd week03
+..\.venv\Scripts\python.exe apptest_smoke.py      # every tab, filter and error path
+cd ..
+cd week06
+..\.venv\Scripts\python.exe apptest_smoke.py      # every section, example button and error
+cd ..
 ```
 
 Expected: `ALL PASSED`. It drives the real Streamlit app through `AppTest`,
-covering all six tabs, all nine modes, the `k1 = 0` switch, and six malformed
+covering all seven tabs, all nine modes, the `k1 = 0` switch, and six malformed
 queries that must be refused rather than crash.
+
+**Week 6, by hand.** Each check below should give the stated answer.
+
+- `--query hypertenion` finds **7 of 30** articles, and the top one is m01 Hypertension
+  with a score of **0.70**. Add `--no-partial` and the same query finds **0**, because
+  the typo is not an exact word.
+- `--query "hypertension AND NOT diabetes" --mode extended` returns one article, **m01**.
+- `--sets diabetes hypertension kidney` prints the same set for `(A or B) minus C` and
+  for the query, and says **equal**.
+- `--query the` is refused with a message about a stop word, and the command exits with
+  status 1.
+
+The corpus is hand-written teaching material, not clinical guidance. The scores show how
+the models behave on it, not how they would perform on a real clinical archive.
 
 The two doc checkers exist because this repository's documentation was wrong
 twice, for different reasons — once a line number drifted after an edit, and
@@ -360,6 +480,35 @@ paper and happens to be right scores 1.0, and recall and MAP are undefined.
 **Open this file.** Every number in the table is a direct function of it. If you
 disagree with a judgement, the number is wrong no matter what the code says.
 
+### 4.11 The browsing module navigates the same collection
+
+```powershell
+.\.venv\Scripts\python.exe week03\main.py --console --tree
+.\.venv\Scripts\python.exe week03\main.py --console --doc p04
+.\.venv\Scripts\python.exe week03\main.py --console --graph
+```
+
+| you must see | why it matters |
+|---|---|
+| the tree is `Repository` → **6** domains → **11** subtopics, totalling 20 documents | the categories are derived from the papers by `week03/taxonomy.py`, not hand-listed |
+| the `p04` breadcrumb reads `Repository / Information Retrieval / Structured & Proximity Search` | the trail is built from the tree, so it cannot disagree with the hierarchy |
+| `\|N\| = 98`, `\|L\| = 261` | hierarchy 37 + internal 100 + related 60 + shared-venue 6 + shared-year 58 |
+| `p04` related documents are `p11`, `p17`, `p05` | the content links, by cosine over title + abstract |
+
+Then in the web UI (`week03\main.py --web`) — the checks automation cannot make:
+
+1. **Browse** — click into *Information Retrieval*, then *Ranking & Scoring*. The
+   breadcrumb grows and the list narrows to `p03, p16`.
+2. **Search** — run `proximity window`; `p04` must be first. Set the `year`
+   filter in the sidebar to `2021` and confirm the candidate count falls.
+3. **Document** — open `p17`; confirm the trail, the three expandable sections,
+   and that **related** lists `p14` first. Underlined words inside the sections
+   are hypertext links: clicking one opens that paper.
+4. **Hypertext** — ask for the path `p01 → p18`. It must be **two** `related`
+   moves, and every hop must appear in the out-links table above it.
+5. **History** — after moving around, the section shows the trail and the
+   **back** button in the sidebar walks it.
+
 ---
 
 ## 5. Reading the documentation
@@ -379,6 +528,14 @@ line that computes it.
 | `evaluation.md` | P@k, MRR, MAP, and what the numbers do not prove |
 
 Week 1 has the same layout under `week01/docs/understanding/`.
+
+Week 3's three guides are in `week03/docs/understanding/`:
+
+| guide | covers |
+|---|---|
+| `browsing-models.md` | the three browsing models, and every requirement mapped to the code that implements it |
+| `taxonomy.md` | the keyword rules that derive the categories, and the assignment they produce |
+| `navigation.md` | breadcrumbs, the navigation history, and H = (N, L) |
 
 **The docs are executable.** `check_doc_lines.py` asserts that each cited line
 actually contains what the page claims it contains, and `check_doc_claims.py`

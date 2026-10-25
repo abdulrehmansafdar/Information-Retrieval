@@ -3,6 +3,16 @@
 from streamlit.testing.v1 import AppTest
 
 
+def set_mode(at, mode):
+    """Select the retrieval model. Found by key, not position.
+
+    The model control is the radio whose key is "mode"; looking it up by key
+    keeps this correct even when other radios appear on the page.
+    """
+    next(r for r in at.radio if r.key == "mode").set_value(mode)
+    return at.run()
+
+
 def report(name, at):
     if at.exception:
         print(f"FAIL {name}")
@@ -26,25 +36,25 @@ passed &= report("bm25 search", at)
 
 # 3. bim
 at = AppTest.from_file("app.py", default_timeout=240).run()
-at.radio[1].set_value("bim").run()
+at = set_mode(at, "bim")
 at.text_input(key="q_bim").set_value("term weighting saturation").run()
 passed &= report("bim search", at)
 
 # 4. boolean exact
 at = AppTest.from_file("app.py", default_timeout=240).run()
-at.radio[1].set_value("boolean").run()
+at = set_mode(at, "boolean")
 at.text_input(key="q_boolean").set_value("boolean retrieval").run()
 passed &= report("boolean", at)
 
 # 5. field restricted + cross-field AND
 at = AppTest.from_file("app.py", default_timeout=240).run()
-at.radio[1].set_value("fields").run()
+at = set_mode(at, "fields")
 at.text_input(key="q_fields").set_value("title:search AND results:precision").run()
 passed &= report("fields cross-field", at)
 
 # 6. bad field name -> readable error, no exception
 at = AppTest.from_file("app.py", default_timeout=240).run()
-at.radio[1].set_value("fields").run()
+at = set_mode(at, "fields")
 at.text_input(key="q_fields").set_value("keywords:search").run()
 if at.exception:
     print("FAIL bad field raised")
@@ -56,14 +66,14 @@ else:
 
 # 7. bm25f
 at = AppTest.from_file("app.py", default_timeout=240).run()
-at.radio[1].set_value("bm25f").run()
+at = set_mode(at, "bm25f")
 at.text_input(key="q_bm25f").set_value("structured field search").run()
 passed &= report("bm25f", at)
 
 # 8. overlapped / non-overlapped through the search tab
 for mode in ("overlapped", "non-overlapped"):
     at = AppTest.from_file("app.py", default_timeout=240).run()
-    at.radio[1].set_value(mode).run()
+    at = set_mode(at, mode)
     at.text_input(key=f"q_{mode}").set_value("document index positions").run()
     passed &= report(mode, at)
 
@@ -72,11 +82,11 @@ for mode in ("overlapped", "non-overlapped"):
 # the tab contents are all exercised by the plain run() above.
 at = AppTest.from_file("app.py", default_timeout=240).run()
 labels = [s.label for s in at.slider]
-if "k1 — tf saturation" not in labels:
+if "k1 (term-frequency saturation)" not in labels:
     print(f"FAIL k1 slider missing, sliders are {labels}")
     passed = False
 else:
-    at.slider[labels.index("k1 — tf saturation")].set_value(0.0).run()
+    at.slider[labels.index("k1 (term-frequency saturation)")].set_value(0.0).run()
     messages = [s.value for s in at.info] + [e.value for e in at.error]
     hit = any("Binary Independence Model" in m for m in messages)
     print(f"ok   k1=0 explains it is BIM: {hit}")
@@ -107,14 +117,14 @@ else:
 # 13. Grouped field query. Brackets used to be ignored, so this used to render
 # a result set for a different question with nothing on screen to say so.
 at = AppTest.from_file("app.py", default_timeout=240).run()
-at.radio[1].set_value("fields").run()
+at = set_mode(at, "fields")
 at.text_input(key="q_fields").set_value(
     "(title:search OR abstract:rank) AND abstract:result").run()
 passed &= report("fields with brackets", at)
 
 # 14. Every malformed field query must show a message, never raise.
 at = AppTest.from_file("app.py", default_timeout=240).run()
-at.radio[1].set_value("fields").run()
+at = set_mode(at, "fields")
 shown = 0
 for bad in ("keywords:search", "title:search NOT results:x", "(title:a OR title:b",
             ":search", "title:", "title:search AND"):

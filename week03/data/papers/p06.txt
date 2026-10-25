@@ -1,0 +1,16 @@
+Title: Inverted Index Compression Techniques
+Year: 2021
+Venue: Information Processing and Management
+
+## Abstract
+An uncompressed inverted index needs one integer per posting, and the gap posting list usually stores larger integers than necessary. We measure three encodings on the same corpus: gap lists with variable length integers, frequency saturated codes, and skip pointers. We report index size, query latency and the size of the ranking step, because compression that speeds up lookup but slows down ranking can still lose.
+
+## Methodology
+We took a corpus of twenty thousand documents and built an inverted index for every term with positions. Each posting stored a document identifier, a term frequency and a position list. We applied variable length integer coding to the gaps between consecutive document identifiers and to the positions, then measured how many bytes each encoding saved against the uncompressed baseline.
+
+Every timing was taken over at least thirty runs after a warm up, because a single run on a shared machine told us nothing. We measured the lookup step and the ranking step separately rather than end to end, and we measured both on cache hot and cache cold indexes, since an encoding that only works once the index fits in memory is not an encoding anyone can ship.
+
+## Results
+Gap compression with variable length integers reduced the index by 38 percent with no measurable slowdown. Frequency saturation to three bits saved a further 4 percent. Skip pointers helped only when postings lists exceeded five thousand entries. Ranking over compressed postings was 22 percent slower than over raw integers, which surprised us and changed our recommendation.
+
+The position lists, not the document identifiers, accounted for 71 percent of the uncompressed size, so any index that skips positions should expect to give back most of its savings. Cold cache ranking over the compressed index was 2.4 times slower, which is the number that decides whether compression is safe in practice.

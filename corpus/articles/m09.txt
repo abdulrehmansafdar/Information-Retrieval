@@ -1,0 +1,16 @@
+Title: Asthma
+Specialty: Respiratory
+Code: J45
+Updated: 2025
+
+## Overview
+Asthma is a long-term condition in which the airways are inflamed and sensitive. They narrow in response to triggers such as dust mites, pollen, smoke, cold air, exercise and infections. The narrowing causes wheeze, cough and breathlessness, and the symptoms often come and go. Asthma can start at any age and is frequently linked with allergies and eczema.
+
+## Symptoms
+The usual symptoms are wheezing, a tight chest, coughing that is worse at night or early in the morning, and shortness of breath. A severe attack is an emergency: the person struggles to speak, the lips turn blue or the reliever inhaler gives no relief.
+
+## Diagnosis
+Diagnosis depends on a pattern of symptoms that vary over time, supported by lung function tests. Spirometry shows how much air can be breathed out and how fast, and a reversibility test checks whether an inhaler improves it. A fractional exhaled nitric oxide test can show airway inflammation.
+
+## Treatment
+Treatment is built in steps. A short-acting reliever inhaler is used when needed. A daily preventer inhaler, usually an inhaled corticosteroid, reduces inflammation and the risk of attacks. A long-acting bronchodilator is added if control is still poor. Patients are taught correct inhaler technique and given a written action plan for flare-ups.

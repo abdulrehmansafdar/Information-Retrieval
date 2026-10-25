@@ -1,0 +1,16 @@
+Title: Hepatitis B
+Specialty: Infectious Disease
+Code: B18
+Updated: 2025
+
+## Overview
+Hepatitis B is a viral infection of the liver caused by the hepatitis B virus. It spreads through blood, semen and other body fluids, most often from mother to baby at birth, through sexual contact, or through shared needles. Many adults clear the infection on their own. Infection in childhood is more likely to become chronic and can lead to cirrhosis and liver cancer over decades.
+
+## Symptoms
+An acute infection may cause tiredness, nausea, loss of appetite, abdominal discomfort and yellowing of the skin and eyes, which is jaundice. Many people, especially children, have no symptoms. Chronic infection is often silent until liver damage is advanced.
+
+## Diagnosis
+Blood tests look for the surface antigen of the virus, which shows infection, and for antibodies, which show past infection or immunity. Viral load and liver enzyme tests show how active the disease is. Liver stiffness measurement or a scan helps assess scarring.
+
+## Treatment
+Acute hepatitis B is usually managed with rest and monitoring, because most adults recover fully. Chronic infection is treated with antiviral tablets such as tenofovir or entecavir, which suppress the virus and lower the risk of liver cancer. Treatment is long-term. Vaccination at birth and in adulthood is the most effective prevention.

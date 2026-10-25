@@ -1,0 +1,16 @@
+Title: Malaria
+Specialty: Infectious Disease
+Code: B54
+Updated: 2024
+
+## Overview
+Malaria is a disease caused by Plasmodium parasites that are carried by female Anopheles mosquitoes. Five species infect humans, and Plasmodium falciparum is the most dangerous. The parasites multiply first in the liver and then in red blood cells. Malaria is common in sub-Saharan Africa, parts of Asia and South America, and it can be fatal if treatment is delayed.
+
+## Symptoms
+Early symptoms resemble flu: fever, chills, headache, sweating, muscle pain and tiredness. Fever often comes in cycles. Severe falciparum malaria can cause confusion, seizures, severe anaemia, kidney failure, breathing difficulty and low blood sugar. Any fever during or after a trip to a malaria area needs urgent testing.
+
+## Diagnosis
+A blood film examined under a microscope is the standard test, and a rapid diagnostic test gives a result within minutes. Tests are repeated over time because parasite levels change. Blood glucose, kidney function and platelet count are checked in severe cases.
+
+## Treatment
+Uncomplicated malaria is treated with artemisinin-based combination therapy, which is effective for most species. Severe malaria needs intravenous artesunate in hospital. Travellers take preventive tablets and use bed nets and insect repellent. Dengue and malaria both cause fever and can be confused, so a test is always needed before treatment.

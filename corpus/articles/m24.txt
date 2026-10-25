@@ -1,0 +1,16 @@
+Title: Urinary Tract Infection
+Specialty: Nephrology
+Code: N39
+Updated: 2025
+
+## Overview
+A urinary tract infection, or UTI, is an infection of any part of the urinary system: the bladder, the urethra or the kidneys. Most infections are caused by bacteria from the bowel, especially Escherichia coli, that enter through the urethra. Women are affected far more often than men because the urethra is shorter. Risk rises with sexual activity, pregnancy, diabetes, catheters and urinary blockage.
+
+## Symptoms
+A bladder infection causes a burning feeling when passing urine, a strong and frequent urge to urinate, and pain low in the abdomen. Cloudy or strong-smelling urine is common. A kidney infection adds fever, back or flank pain, shaking and nausea, and needs urgent treatment.
+
+## Diagnosis
+A urine dipstick test checks for white cells, nitrites and blood. A urine culture confirms the bacteria and shows which antibiotics will work. Blood tests and imaging are used when the infection is severe, keeps recurring or affects a man or a child.
+
+## Treatment
+Simple bladder infections are treated with a short course of antibiotics such as nitrofurantoin or trimethoprim, chosen by local resistance patterns. Kidney infections need a longer course, sometimes given in hospital. Drinking plenty of fluids helps. Recurrent infections are investigated for structural causes, and preventive treatment may be given.

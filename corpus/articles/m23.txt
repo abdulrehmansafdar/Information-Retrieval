@@ -1,0 +1,16 @@
+Title: Chronic Kidney Disease
+Specialty: Nephrology
+Code: N18
+Updated: 2025
+
+## Overview
+Chronic kidney disease is a gradual loss of kidney function over months or years. The kidneys filter waste and extra fluid from the blood, and when they weaken, these substances build up. The main causes are diabetes and high blood pressure, which damage the tiny filters inside the kidneys. Other causes include glomerulonephritis, polycystic kidney disease and long-term use of some painkillers. Heart disease and stroke are common alongside it.
+
+## Symptoms
+Early kidney disease is usually silent. Later signs include tiredness, swelling of the feet and ankles, passing more or less urine, itchy skin, poor appetite, and difficulty sleeping. Anaemia (spelled anemia in some sources) is common, because the kidneys help make the hormone that stimulates red blood cell production.
+
+## Diagnosis
+Diagnosis rests on two tests. A blood test for creatinine gives an estimated glomerular filtration rate (eGFR), and a urine test for albumin shows protein leakage. Both must be abnormal for three months to confirm chronic disease. An ultrasound scan checks the size and structure of the kidneys.
+
+## Treatment
+Blood pressure and blood sugar are controlled, usually with an ACE inhibitor or an SGLT2 inhibitor that also protects the kidneys. A low-salt diet, stopping smoking and avoiding regular painkiller use help. Anaemia and mineral imbalance are treated as they arise. Dialysis or a kidney transplant is needed when kidney function falls to a low level.

@@ -1,0 +1,16 @@
+Title: Chronic Obstructive Pulmonary Disease
+Specialty: Respiratory
+Code: J44
+Updated: 2024
+
+## Overview
+Chronic obstructive pulmonary disease, or COPD, is a long-term lung disease in which airflow is limited and does not fully return to normal. It is caused mainly by smoking and by long exposure to smoke, fumes or dust. It includes emphysema, where the air sacs are damaged, and chronic bronchitis, where the airways are persistently inflamed. The damage is permanent, but progression can be slowed.
+
+## Symptoms
+Typical symptoms are a persistent cough, a daily production of sputum, breathlessness that gets worse with activity, and frequent chest infections. Flare-ups, when symptoms suddenly worsen, are a major cause of hospital admission and need prompt treatment.
+
+## Diagnosis
+Spirometry is the key test. A ratio of forced expiratory volume to forced vital capacity below 0.7 after a bronchodilator confirms airflow limitation. A chest X-ray or CT scan checks for other causes, and oxygen levels are measured in people with severe disease.
+
+## Treatment
+Stopping smoking is the most important step and the only one that slows the decline in lung function. Inhalers, usually a long-acting bronchodilator with or without an inhaled steroid, reduce breathlessness and flare-ups. Pulmonary rehabilitation, vaccinations and oxygen therapy for low oxygen levels form the rest of the plan.

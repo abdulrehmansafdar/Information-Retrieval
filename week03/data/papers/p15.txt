@@ -1,0 +1,16 @@
+Title: Faceted Search Interfaces in Digital Libraries
+Year: 2021
+Venue: Library and Information Science Research
+
+## Abstract
+A faceted interface offers the user controls for subject, year and document type, and returns a ranked list within whatever subset the controls describe. We compared two designs, one filtering the result set after ranking and one restricting the ranking itself, and we measured whether restricting the ranking changes which documents come first inside the selected subset.
+
+## Methodology
+Sixty participants ran 200 searching tasks on a catalogue of 30,000 books. One interface applied the facet filters after a global ranking, the other built a restricted ranking over the selected subset only. We logged clicks, reformulations, task success judged by the participant, and the position of the first clicked record.
+
+Participants were assigned to interfaces by Latin square rather than by self selection, since volunteers who choose the interface they prefer would otherwise produce a study about preference rather than about design. Each task had a known answer set derived from the catalogue metadata, so success could be judged without asking the participant.
+
+## Results
+Restricting the ranking raised task success from 0.61 to 0.72 and moved the first click from median position 4 to position 2. Post filtering returned the right set but ranked it as if the rest of the collection still existed. Participants noticed the difference only after three or more interactions. Zero result facet selections remained the dominant failure mode.
+
+Facet selections that produced no results accounted for 29 percent of all abandoned tasks, which is a larger effect than the ranking design itself. Showing the count beside each facet value before selection reduced abandonment by more than a third, which we consider the highest value change in the whole study.

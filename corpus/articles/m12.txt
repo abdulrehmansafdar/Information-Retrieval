@@ -1,0 +1,16 @@
+Title: Tuberculosis
+Specialty: Respiratory
+Code: A15
+Updated: 2025
+
+## Overview
+Tuberculosis, or TB, is an infection caused by the bacterium Mycobacterium tuberculosis. It usually affects the lungs and spreads through the air when a person with active lung disease coughs, sneezes or speaks. Many people carry the bacteria without being ill; this is latent infection, and a proportion later develops active disease. People with HIV, diabetes, malnutrition or smoking habits are at higher risk.
+
+## Symptoms
+Active lung TB causes a cough lasting more than three weeks, sometimes with blood in the sputum, along with night sweats, fever, weight loss and loss of appetite. TB can also affect the lymph nodes, spine, kidneys or brain, and the symptoms then depend on the site.
+
+## Diagnosis
+A chest X-ray and a sputum test are the first steps. Sputum is examined by microscopy and by a rapid molecular test that detects the bacteria and resistance to rifampicin. A skin or blood test can show that a person has been exposed, but it does not separate latent from active disease.
+
+## Treatment
+Active TB is treated with a combination of antibiotics for at least six months, usually isoniazid, rifampicin, pyrazinamide and ethambutol. Taking every dose is essential, because incomplete treatment produces drug-resistant strains. Contacts are screened, and people with latent infection may be offered preventive treatment.

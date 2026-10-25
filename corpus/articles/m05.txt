@@ -1,0 +1,16 @@
+Title: Type 1 Diabetes
+Specialty: Endocrinology
+Code: E10
+Updated: 2025
+
+## Overview
+Type 1 diabetes is an autoimmune condition in which the immune system destroys the insulin-producing beta cells of the pancreas. Without insulin, glucose cannot enter the cells and builds up in the blood. It usually begins in childhood or early adulthood, but it can start at any age. It cannot be prevented, and people with it need insulin for life.
+
+## Symptoms
+Symptoms often appear quickly over a few weeks. They include increased thirst, frequent urination, weight loss, constant tiredness, blurred vision and hunger. Untreated, the body may produce acids called ketones, which can lead to diabetic ketoacidosis, a medical emergency with vomiting, deep breathing and confusion.
+
+## Diagnosis
+Diagnosis uses blood glucose readings, an HbA1c test that reflects average blood sugar over about three months, and tests for diabetes-related antibodies. Ketone checks are used when a patient is ill or has high glucose.
+
+## Treatment
+Treatment is insulin given by injection or an insulin pump, matched to food, activity and blood glucose readings. Continuous glucose monitors help people see trends and avoid lows, which can be dangerous. Patients are taught carbohydrate counting, sick-day rules and how to recognise and treat hypoglycaemia. Regular checks for eye, kidney and nerve complications are part of long-term care.

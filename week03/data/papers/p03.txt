@@ -1,0 +1,16 @@
+Title: Learning to Rank for Web Search Results
+Year: 2021
+Venue: International Journal of Information Retrieval
+
+## Abstract
+Learning to rank treats ordering search results as a supervised prediction problem rather than a hand tuned scoring formula. We compare four families of ranking functions over the same feature set and the same relevance judgements, and we report whether the gains survive when the test queries are partitioned by length. Gradient boosted trees beat linear functions on short queries and lose on long ones.
+
+## Methodology
+We used two hundred judged queries with graded relevance on a four point scale. Features included term overlap, document length, click statistics and a freshness signal. We trained pairwise and listwise objectives and tuned the number of boosting rounds on a validation split. Every feature was computed once and shared by all ranking functions so the comparison stayed fair.
+
+Queries were partitioned by length at the median before any training, and every ranking function was retrained on each partition separately as well as on the pooled set. Click features were computed only from sessions older than the evaluation window, because using the test period to build features is the most common way to make a learned ranker look better than it is. Relevance judgements were double assessed and disagreements adjudicated.
+
+## Results
+Gradient boosted trees reached a mean reciprocal rank of 0.71 against 0.63 for the best linear function. Listwise objectives outperformed pairwise on every partition. Query length was the strongest single predictor of ranking difficulty. Freshness features helped only for queries containing temporal words. Feature importance shifted sharply between short and long queries.
+
+A ranker trained on short queries alone lost 12 percent mean reciprocal rank on long queries, and the reverse held as well, which argues that a production system should route by query length rather than ship one model. Pushing past 800 boosting rounds produced no further gain and began to overfit the validation split within twenty additional rounds.

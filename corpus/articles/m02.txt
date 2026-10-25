@@ -1,0 +1,16 @@
+Title: Coronary Artery Disease
+Specialty: Cardiology
+Code: I25
+Updated: 2024
+
+## Overview
+Coronary artery disease develops when the arteries that supply the heart muscle narrow because of a build-up of fatty plaque. The narrowing reduces blood flow, especially during exercise. It is the most common type of heart disease and the main cause of heart attacks. Smoking, high cholesterol, hypertension, diabetes and a family history all increase the risk.
+
+## Symptoms
+The typical symptom is angina: a tight, heavy pain or pressure in the chest that comes on with effort or emotional stress and eases with rest. Breathlessness, tiredness and pain in the arm, jaw or back can also occur. A sudden, long-lasting chest pain that does not ease is an emergency and needs immediate medical help.
+
+## Diagnosis
+Doctors start with a history of symptoms and an electrocardiogram (ECG). An exercise stress test, a coronary CT angiogram or an echocardiogram can show blocked or narrowed arteries and areas of the heart that get too little blood. Blood tests check cholesterol and troponin, a marker of heart muscle damage.
+
+## Treatment
+Treatment combines lifestyle change with medicines. Statins lower cholesterol, aspirin or other antiplatelet drugs reduce clotting, and beta blockers or nitrates ease angina. Where arteries are severely narrowed, a stent or a bypass operation restores blood flow. Hypertension and diabetes are controlled as part of the same plan.

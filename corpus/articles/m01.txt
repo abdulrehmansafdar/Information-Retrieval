@@ -1,0 +1,16 @@
+Title: Hypertension
+Specialty: Cardiology
+Code: I10
+Updated: 2025
+
+## Overview
+Hypertension, or high blood pressure, is a condition in which the force of blood against the artery walls stays too high over time. It is one of the most common long-term conditions and a leading cause of stroke, heart attack, heart failure and kidney disease. Most cases have no single cause. Age, family history, excess salt, low physical activity, alcohol and excess body weight all raise the risk.
+
+## Symptoms
+Hypertension is often called the silent condition because it usually causes no symptoms. Some people notice headaches, dizziness or nosebleeds, but these are not reliable signs. The danger lies in the quiet damage it does to the heart, brain, eyes and kidneys, which is why regular measurement matters more than waiting for symptoms.
+
+## Diagnosis
+Diagnosis rests on repeated blood pressure readings taken on different days. A reading at or above 140 over 90 mmHg in a clinic is usually followed by home or ambulatory monitoring. Doctors also check kidney function, blood sugar and cholesterol, and look for signs of damage to the heart and eyes to judge the overall risk.
+
+## Treatment
+Lifestyle change is the first step: less salt, more fruit and vegetables, regular exercise, less alcohol and a healthy weight. When these are not enough, medicines such as ACE inhibitors, angiotensin receptor blockers, calcium channel blockers and thiazide diuretics lower the pressure. Treatment is usually lifelong, and the aim is a steady reduction in risk rather than a single good reading.

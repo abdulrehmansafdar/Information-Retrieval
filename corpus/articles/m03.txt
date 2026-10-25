@@ -1,0 +1,16 @@
+Title: Heart Failure
+Specialty: Cardiology
+Code: I50
+Updated: 2025
+
+## Overview
+Heart failure is a syndrome in which the heart cannot pump enough blood to meet the body's needs, or can do so only at a higher filling pressure. It does not mean the heart has stopped. Causes include coronary artery disease, long-standing hypertension, valve disease, cardiomyopathy and diabetes. The condition is progressive and is managed over many years.
+
+## Symptoms
+Breathlessness on exertion or when lying flat is the most common sign. Patients also report tiredness, swelling of the ankles and legs, a fast heartbeat, a cough that worsens at night and reduced ability to exercise. Sudden severe breathlessness is an emergency.
+
+## Diagnosis
+A blood test for natriuretic peptides (BNP or NT-proBNP) helps show whether the heart is under strain. An echocardiogram measures how well the heart pumps, usually as the ejection fraction. A chest X-ray and an ECG add information about the lungs, rhythm and heart size.
+
+## Treatment
+Standard drug treatment includes ACE inhibitors or sacubitril-valsartan, beta blockers, mineralocorticoid antagonists and SGLT2 inhibitors, adjusted to the patient's blood pressure and kidney function. Diuretics control fluid build-up. Salt and fluid limits, daily weight checks and regular review reduce hospital admissions. Devices such as pacemakers or defibrillators are used in selected patients.

@@ -1,0 +1,16 @@
+Title: Proximity Operators in Structured Text Retrieval
+Year: 2020
+Venue: Journal of Information Systems
+
+## Abstract
+Classic retrieval models score a document as a bag of words and cannot express where a term occurs. We study proximity operators that constrain how close two query terms must be, and we show that a proximity window of eight terms recovers most of the precision gained from exact phrase matching while still returning material that a phrase query would miss. The evaluation uses a hierarchy of document sections rather than a flat document.
+
+## Methodology
+We built a positional index over a corpus of technical reports divided into sections and paragraphs. For each query pair we counted the minimal window containing both terms and recorded its length. A proximity window of eight terms was compared against exact phrase matching and against bag of words retrieval on the same index and the same queries.
+
+Each matching region was labelled by an assessor as on topic or off topic, and we deliberately judged the region rather than the document, because a document is often only partly about the query. Windows were tested at two, four, eight, sixteen and fifty terms on the same queries, and the structural level was varied independently of the window size so that the two effects could be separated rather than confounded.
+
+## Results
+Exact phrase matching gave the highest precision but the lowest coverage, returning results for only 34 percent of queries. A proximity window of eight terms retained 88 percent of the phrase precision while answering every query. Widening the window to fifty terms converged towards bag of words behaviour, confirming that the window is the real control knob.
+
+Returning the matching sentence rather than the whole section raised judged precision by 0.14 at every window size, which is a larger effect than the window parameter itself. A proximity window tuned on one query length did not transfer to another, so the window should be treated as a query length dependent parameter.

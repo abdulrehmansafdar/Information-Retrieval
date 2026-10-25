@@ -1,0 +1,16 @@
+Title: Depression
+Specialty: Mental Health
+Code: F32
+Updated: 2025
+
+## Overview
+Depression is a common mental health condition that causes a persistent low mood and a loss of interest in everyday activities. It affects thinking, sleep, appetite and energy, and it can be mild, moderate or severe. Depression often follows stressful events, bereavement, illness or long-term pressure, though it can also occur without a clear trigger. It is treatable, and most people improve with help.
+
+## Symptoms
+The core signs are a low mood most of the day, loss of pleasure, and tiredness that lasts two weeks or more. Other common symptoms include poor concentration, feelings of guilt or hopelessness, changes in sleep and appetite, slowed movement or restlessness, and thoughts of death. Any thoughts of suicide need an immediate and careful response.
+
+## Diagnosis
+Diagnosis is made by a clinician through an interview about the mood and symptoms, their duration and their effect on daily life. Standard questionnaires such as the PHQ-9 help measure severity and track progress. Blood tests may be used to rule out thyroid problems, anaemia and other physical causes.
+
+## Treatment
+Mild depression may improve with support, exercise and self-help. Moderate and severe depression are treated with talking therapies such as cognitive behavioural therapy, with antidepressant medicines such as sertraline, or with both. Treatment usually continues for at least six months after recovery to prevent relapse. Crisis support is available for anyone at risk.

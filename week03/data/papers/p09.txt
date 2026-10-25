@@ -1,0 +1,16 @@
+Title: Evaluating Retrieval Systems with Metrics
+Year: 2023
+Venue: International Journal of Information Retrieval
+
+## Abstract
+Choosing a retrieval model requires a number, and most reported numbers are incomparable because the cutoffs and the pooling differ. We review precision at k, recall at k, mean reciprocal rank and mean average precision, and we show on one fixed corpus that two of these four disagree about which of two systems is better. We argue that reporting a single metric without the judgement protocol is not a result.
+
+## Methodology
+We built a small test collection of four hundred documents with fifty judged queries and binary relevance. Two systems were compared: one ranking by term weight alone and one adding a phrase bonus. Judgements were pooled from five assessors and disagreements were resolved by discussion. We computed each metric at cutoffs one, five and ten and reported the pooled depths.
+
+Every system was tuned on a disjoint set of thirty queries and judged on the fifty, because a number reported by a system that has already seen the judgements describes the fitting rather than the retrieval. We also ran each assessor separately to see how much of the final ordering was attributable to the assessors rather than to the two systems.
+
+## Results
+Mean average precision ranked the phrase system first while precision at one ranked the weight system first, because the phrase system placed its best result at rank three. Mean reciprocal rank agreed with mean average precision on forty six of fifty queries. Pooling depth changed the absolute numbers by up to nine percent but almost never changed the ordering.
+
+Assessor variation moved mean average precision by up to 0.04, which is larger than the gap between the two systems on 12 of 50 queries. On those queries we simply cannot say which system is better, and reporting a winner anyway would be dishonest.

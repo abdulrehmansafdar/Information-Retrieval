@@ -1,0 +1,16 @@
+Title: Obesity
+Specialty: Endocrinology
+Code: E66
+Updated: 2024
+
+## Overview
+Obesity is a chronic condition of excess body fat that harms health. It is usually measured with body mass index (BMI), where a value of 30 or more is classed as obese. Obesity raises the risk of type 2 diabetes, hypertension, coronary artery disease, fatty liver disease, sleep apnoea and some cancers. Its causes include diet, inactivity, sleep, stress, genetics and the food environment.
+
+## Symptoms
+Obesity itself is often felt as breathlessness on exertion, joint pain, tiredness and poor sleep. Many of its effects are silent until they show up as a complication, such as high blood sugar or high blood pressure found at a routine check.
+
+## Diagnosis
+The diagnosis is based on BMI and waist measurement. Doctors then screen for related conditions with blood pressure readings, a fasting glucose or HbA1c test, cholesterol tests and a liver function check. A sleep study is used when snoring and daytime tiredness suggest apnoea.
+
+## Treatment
+The first step is a sustained change in diet and physical activity, with a clear weight goal. Medicines that reduce appetite or the absorption of fat can help some patients, and newer drugs that mimic the GLP-1 hormone can produce large weight loss. Surgery is considered for people with severe obesity who have not responded to other treatment.

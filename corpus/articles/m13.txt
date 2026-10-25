@@ -1,0 +1,16 @@
+Title: Dengue Fever
+Specialty: Infectious Disease
+Code: A90
+Updated: 2025
+
+## Overview
+Dengue is a viral infection spread by the bite of infected Aedes mosquitoes, mainly Aedes aegypti. It is common in tropical and subtropical areas, especially in towns with standing water and crowding. There are four related virus types, and infection with one gives lasting protection only against that type. A second infection with a different type raises the risk of severe disease.
+
+## Symptoms
+Dengue usually begins with a sudden high fever, severe headache, pain behind the eyes, aching muscles and joints, and a rash. Many cases are mild. Warning signs that the illness is becoming severe include strong abdominal pain, persistent vomiting, bleeding from the gums or nose, and a fall in platelet count.
+
+## Diagnosis
+Diagnosis uses a blood test for the virus or its antibodies, together with a full blood count. A low platelet count and a raised haematocrit are common findings. Doctors monitor blood pressure, pulse and urine output in the days after the fever falls, because that is when plasma leakage can occur.
+
+## Treatment
+There is no specific antiviral drug. Treatment is supportive: rest, plenty of fluids taken by mouth or by drip, and paracetamol for fever. Aspirin and ibuprofen are avoided because they increase bleeding risk. Patients with warning signs need hospital care. Vaccines and mosquito control are the main prevention tools.

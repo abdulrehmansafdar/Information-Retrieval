@@ -1,0 +1,16 @@
+Title: Pneumonia
+Specialty: Respiratory
+Code: J18
+Updated: 2025
+
+## Overview
+Pneumonia is an infection that inflames the air sacs of one or both lungs, which may fill with fluid or pus. Bacteria, viruses and, less often, fungi can cause it. It is a leading cause of hospital admission, especially in young children, older adults and people with weak immune systems or chronic lung or heart disease. Community-acquired pneumonia is caught outside hospital; hospital-acquired pneumonia develops during a stay.
+
+## Symptoms
+Common symptoms are fever, a cough that brings up phlegm, chest pain when breathing in, shortness of breath and feeling very tired. Older people may show confusion rather than fever. Rapid breathing, a blue tinge to the lips or very low blood pressure are signs of serious illness.
+
+## Diagnosis
+A chest X-ray shows the infected area. Blood tests look for signs of infection and organ strain, and a sputum sample may identify the germ. Oxygen levels are measured with a pulse oximeter. A severity score helps decide whether a patient can be treated at home or needs hospital care.
+
+## Treatment
+Bacterial pneumonia is treated with antibiotics chosen by the likely germ and local resistance patterns. Viral pneumonia may need antiviral medicine, and all patients need fluids, pain and fever relief, and rest. Oxygen is given when levels are low. Vaccination against pneumococcus and influenza lowers the risk of future cases.

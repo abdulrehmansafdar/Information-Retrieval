@@ -1,0 +1,16 @@
+Title: Deep Learning for Medical Image Segmentation
+Year: 2023
+Venue: Journal of Applied Informatics
+
+## Abstract
+Automatic segmentation of medical images remains difficult because anatomy varies sharply between patients and scanners rarely produce identical distributions. This study evaluates convolutional architectures against classical statistical segmentation on three public datasets of brain and lung scans. We report Dice coefficients, boundary error and the failure modes of each method, and we show that a modest network outperforms handcrafted features without any hand tuning.
+
+## Methodology
+We trained a deep learning model on 18,000 labelled slices and held out a stratified test set of 2,000. A deep learning baseline used residual blocks with batch normalisation and dropout. Every network was trained for 60 epochs with early stopping on a validation split, using Adam at a learning rate of 3e-4. Classical methods included active contours and a Markov random field smoother.
+
+A second architecture replaced the encoder decoder pair with a pyramid that merged features across three scales, so that thin structures survived downsampling. Both architectures were trained with the identical schedule and the identical augmentation policy, and both were evaluated on the same held out split with the same metric code, so that the comparison isolates the architecture rather than the tuning. Training ran on a single GPU over eleven hours.
+
+## Results
+The deep learning model reached a Dice coefficient of 0.912 against 0.874 for the best classical method. Segmentation errors concentrated along low contrast boundaries in the lung base. Imaging modality was the single strongest predictor of failure. Data augmentation with rotation and intensity scaling recovered most of the remaining gap.
+
+The pyramid architecture added 0.006 Dice over the encoder decoder pair, which we judged not worth the extra compute, and it doubled inference cost. Classical active contours failed outright on 11 percent of lung slices, almost always when the boundary was ambiguous. We found no accuracy setting where the classical method was competitive, but it needed no training data at all.
