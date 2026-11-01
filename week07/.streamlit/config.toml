@@ -1,0 +1,18 @@
+# Theme for the Week 7 semantic ranking app. The same base as week 6.
+#
+# Neutral off-white base, near-black text, one teal accent. Cards are white on the
+# off-white, so they lift without a heavy shadow.
+
+[theme]
+base = "light"
+primaryColor = "#0f766e"
+backgroundColor = "#FAFAF9"
+secondaryBackgroundColor = "#F1F1EF"
+textColor = "#1A1A1A"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

@@ -1,6 +1,6 @@
 # GUIDE — running this project, and checking by hand that it is right
 
-This repository holds three independent Information Retrieval modules.
+This repository holds independent Information Retrieval modules, one for each week below.
 
 | | what it is | where |
 |---|---|---|
@@ -8,6 +8,7 @@ This repository holds three independent Information Retrieval modules.
 | **Week 2** | positional index, BIM, BM25, BM25F, overlapped / non-overlapped lists, the proximal node model, and an effectiveness evaluation, on its own 20-paper corpus | `week02/` |
 | **Week 3** | browsing / navigation architecture: a home page, a derived category hierarchy, document lists, search + browse, breadcrumbs, related-document links and document preview, over the same 20-paper collection | `week03/` |
 | **Week 6** | fuzzy search and the extended Boolean model over the **shared medical corpus** in `corpus/` (30 clinical articles): membership functions, partial matching, fuzzy and p-norm AND / OR / NOT, a query parser, and ranked results | `week06/` |
+| **Week 7** | a semantic ranking module over the same shared corpus: the term-document matrix, query vectors, cosine similarity worked step by step, GVSM as the slides define it, and LSI using SVD | `week07/` |
 
 Week 2 is **self-contained**. It does not import week 1. Week 1 is kept as the
 baseline it grew out of, and week 2 re-implements its boolean and TF-IDF models
@@ -26,7 +27,13 @@ gives the file format. Week 6 implements the fuzzy and extended Boolean models o
 the week 6 lecture: membership values between 0 and 1, partial matching, fuzzy and
 p-norm AND / OR / NOT, a query parser, and ranked results, with a web UI and a console UI.
 
-The seven minimum requirements are all present: a **home page**, a **category
+Week 7 reads the same shared corpus. It implements the algebraic models of the week 7
+lecture: documents and queries as vectors, the cosine formula written out as plain
+loops, GVSM as the slides define it, and LSI using SVD, with a measured comparison of the
+two. It is the IR students' assignment, the semantic ranking module; the Advanced IR
+research document is not part of it.
+
+For week 3, the seven minimum requirements are all present: a **home page**, a **category
 hierarchy**, a **document list**, a **search + browse** option, **breadcrumb**
 navigation, **related document** links and a **document preview**, plus filters
 and a navigation history.
@@ -49,7 +56,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-Dependencies are `nltk`, `rich`, `streamlit` and `pytest` — see `requirements.txt`.
+Dependencies are `nltk`, `rich`, `numpy`, `streamlit` and `pytest` — see `requirements.txt`.
 On macOS or Linux the interpreter path is `.venv/bin/python` instead.
 
 **No separate corpus download is needed.** Week 2's 20 papers are plain text
@@ -170,6 +177,34 @@ Opens on **Start here**, with six sections chosen from the bar at the top:
 **Start here**, **Search**, **Compare**, **Membership**, **Set view**, **Articles**.
 The three example buttons on *Start here* fill the search box and open **Search**.
 
+### Week 7 — console
+
+```powershell
+.\.venv\Scripts\python.exe week07\main.py --console                                    # type queries at a prompt
+.\.venv\Scripts\python.exe week07\main.py --console --query "wheezing"                 # LSI, the top articles
+.\.venv\Scripts\python.exe week07\main.py --console --query "wheezing" --model gvsm    # the plain vector model
+.\.venv\Scripts\python.exe week07\main.py --console --query "wheezing" --compare       # both, side by side
+.\.venv\Scripts\python.exe week07\main.py --console --query "wheezing" --steps m10     # the worked cosine
+.\.venv\Scripts\python.exe week07\main.py --console --slide                            # the lecture's examples
+.\.venv\Scripts\python.exe week07\main.py --console --matrix slide                     # A: slide, space or corpus
+.\.venv\Scripts\python.exe week07\main.py --console --svd slide                        # U, Sigma_k and V_k^T
+.\.venv\Scripts\python.exe week07\main.py --console --concepts                         # the hidden themes
+.\.venv\Scripts\python.exe week07\main.py --console --eval                             # GVSM against LSI, measured
+```
+
+The other settings are `--weighting tfidf|count|binary`, `--k` (1 to 30, default 15) and `--top`.
+
+### Week 7 — web UI
+
+```powershell
+.\.venv\Scripts\python.exe week07\main.py --web
+```
+
+Opens on **Search**, with two sections chosen from the bar at the top: **Search** and
+**Documents**. Search switches between LSI and GVSM, draws every result's cosine as an angle
+from the query, and shows the formula's steps under each result. The matrices, the slide
+examples and the measured comparison are in the console commands above, not in the web UI.
+
 ### The individual modules
 
 Each week 2 module runs standalone and prints its own worked example. This is
@@ -207,6 +242,9 @@ that `cd` into a folder `cd ..` back to the root afterwards.)
 .\.venv\Scripts\python.exe week06\verify.py
 .\.venv\Scripts\python.exe week06\check_doc_lines.py
 .\.venv\Scripts\python.exe week06\check_doc_claims.py
+.\.venv\Scripts\python.exe week07\verify.py
+.\.venv\Scripts\python.exe week07\check_doc_lines.py
+.\.venv\Scripts\python.exe week07\check_doc_claims.py
 ```
 
 What each one covers:
@@ -216,13 +254,16 @@ What each one covers:
 | `week02\verify.py` | corpus shape, index invariants, every mode answers, error paths, BM25 ≡ BIM, evaluation sanity, **and both week02 doc checkers** | `all checks passed` |
 | `week03\verify.py` | the collection loads, the derived taxonomy partitions it, the graph's node and link counts, the search contract, the navigation state, **and both week03 doc checkers** | `all checks passed` |
 | `week06\verify.py` | the shared corpus, membership values between 0 and 1, partial matching, the query language, the operators against the lecture's numbers, the three modes, the set identity on the corpus, **and both week06 doc checkers** | `all checks passed` |
-| `-m pytest` | 549 tests across 19 files | `549 passed` |
+| `week07\verify.py` | the shared corpus, the matrix and the cosine against the slides' numbers, the SVD's mathematical properties, both models, the error paths, the measured comparison, **and both week07 doc checkers** | `all checks passed` |
+| `-m pytest` | 698 tests across 26 files | `698 passed` |
 | `week02\check_doc_lines.py` | 74 `file.py:NN` references cited in the week02 docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
 | `week02\check_doc_claims.py` | re-derives every number quoted in the week02 docs from the corpus | `every number in the docs is still true` |
 | `week03\check_doc_lines.py` | 20 `file.py:NN` references cited in the week03 docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
 | `week03\check_doc_claims.py` | re-derives every number quoted in the week03 docs from the corpus | `every number in the docs is still true` |
 | `week06\check_doc_lines.py` | 12 `file.py:NN` references cited in the week06 docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
 | `week06\check_doc_claims.py` | re-derives every number quoted in the week06 docs from the shared corpus | `every quoted number matches the code` |
+| `week07\check_doc_lines.py` | 20 `file.py:NN` references cited in the week07 docs, each pointing at code **and that line containing what the page claims it contains** | `every reference resolves to code, and every claim matches that line` |
+| `week07\check_doc_claims.py` | re-derives every number quoted in the week07 docs from the shared corpus | `every quoted number matches the code` |
 
 Plus the UIs, which cannot be checked from `verify.py`:
 
@@ -235,6 +276,9 @@ cd week03
 cd ..
 cd week06
 ..\.venv\Scripts\python.exe apptest_smoke.py      # every section, example button and error
+cd ..
+cd week07
+..\.venv\Scripts\python.exe apptest_smoke.py      # every section, weighting, matrix source and error
 cd ..
 ```
 
@@ -252,6 +296,19 @@ queries that must be refused rather than crash.
   for the query, and says **equal**.
 - `--query the` is refused with a message about a stop word, and the command exits with
   status 1.
+
+**Week 7, by hand.** Each check below should give the stated answer.
+
+- `--slide` prints Q = (1, 1), D1 = (5, 3), a dot product of **8** and a cosine of **0.970**.
+  Work it out on paper: 8 / (√2 × √34). It must match slide 8.
+- `--matrix slide` prints slide 11's matrix: rows 1 1 0, 1 0 1, 0 1 1.
+- `--query wheezing --compare` shows GVSM with Asthma only, and LSI with Asthma at **0.986** and
+  COPD at **0.874**, marked "no shared word". Search `corpus/articles/m10.txt` for "wheez": it
+  is not there.
+- `--query wheezing --k 30 --compare` shows the two columns with the same order: keeping every
+  concept gives back GVSM's order.
+- `--eval` prints mean average precision **0.679** for GVSM and **0.758** for LSI at k = 15.
+- `--query the` is refused with a message, and the command exits with status 1.
 
 The corpus is hand-written teaching material, not clinical guidance. The scores show how
 the models behave on it, not how they would perform on a real clinical archive.

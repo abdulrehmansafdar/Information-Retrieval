@@ -140,6 +140,48 @@ same evaluator with 0/1 values. Extended Boolean keeps set logic for *which* art
 
 ---
 
+## 4c. Week 7 — semantic ranking with GVSM and LSI
+
+The web UI has two sections: **Search** and **Documents**. It reads the same 30 articles in
+`corpus/articles`. The matrices are shown in the code and on the console.
+
+| do | you should see | say |
+|---|---|---|
+| Search → *Try: wheezing* (LSI) | a graph of arrows from the query; Asthma **0.986** at 9.6°, COPD **0.874** at 29.1°, COPD in amber | "Cosine is an angle. A smaller angle to the query means a higher rank. COPD does not contain the word, but it shares the same concepts." |
+| Switch the model to **GVSM** | one arrow: Asthma at **0.212** | "GVSM needs a shared word. This is the limit LSI removes." |
+| Open *why* under a result | the angle θ drawn beside the four formula steps | "This is the formula as plain loops: dot product, two lengths, divide. No library computes it." |
+| Settings → k = 30 | the same order as GVSM | "With every concept kept, LSI gives back GVSM's order. Cutting k is what brings out hidden relationships." |
+| **Documents** | the 30 articles, by specialty | "This is the collection being searched. The specialty label is not indexed." |
+
+Show the code in this order: `term_matrix.py` (A), `vector_cosine.py` (the formula),
+`gvsm_model.py`, `lsi_model.py` (the SVD and the query step). To print the matrices:
+
+```powershell
+.\.venv\Scripts\python.exe week07\main.py --console --matrix slide
+.\.venv\Scripts\python.exe week07\main.py --console --svd slide
+.\.venv\Scripts\python.exe week07\main.py --console --eval
+```
+
+**If asked how a graph can show 1,128 dimensions:** any two vectors lie on one flat plane, so the
+angle between Q and D is drawn exactly. Arrow length is not to scale, because cosine ignores it.
+
+**Numbers worth having ready:** 30 articles · 1,128 terms · A is 1,128 × 30 · default k = 15 ·
+67.3% of the squared weight kept · MAP 0.679 (GVSM) and 0.758 (LSI) · slide cosine 0.97.
+
+**The one thing to be able to defend:** LSI uses the same cosine as GVSM. The only change is the
+space: k concepts rather than 1,128 terms. Keep every concept and you get GVSM's order back,
+which a test checks.
+
+**If asked about the GVSM method:** this follows the slides and notes: term or feature vectors,
+flexible weighting, cosine. The textbook version that also models correlation between terms
+(Wong, 1985) is not in the lecture, so it was left out on purpose.
+
+**If asked what is weak:** LSI also brings wrong articles (Migraine for `wheezing`). The answer key
+is coarse, and k was chosen on the same queries it is scored on. See
+`week07/docs/understanding/semantic-matching.md`.
+
+---
+
 ## 5. The thread that ties them together
 
 - **One engine per week, two front ends.** Console and web call the same code, so
@@ -176,6 +218,14 @@ same evaluator with 0/1 values. Extended Boolean keeps set logic for *which* art
 | How does a typo still find an article? | Partial matching: trigram Dice similarity between word stems, discounted by how close the match is, and only above the threshold tau. |
 | Why have both a fuzzy and an extended Boolean model? | Fuzzy ranks every partial match. Extended Boolean keeps exact include and exclude sets and ranks inside them with a p-norm. |
 | What does p do in the p-norm? | p = 1 is a plain average, p = infinity is min and max, and larger p makes the operators stricter. |
+| What is an algebraic IR model? | One that represents documents and queries as vectors or matrices and retrieves by computing on them. |
+| What is the purpose of GVSM? | To rank documents by how close their vector is to the query's, with term or feature dimensions and flexible weighting. |
+| What does cosine similarity measure? | The angle between two vectors: direction, not length. |
+| What is a term-document matrix? | Terms as rows, documents as columns, and weights in the cells. |
+| Why is LSI useful? | It retrieves by concept, so a document can match without sharing a word with the query. |
+| What is the role of SVD in LSI? | It splits A into terms by concept, concept strength, and concepts by document, so that only the top k concepts are kept. |
+| How does LSI help in FYP or research paper retrieval? | A paper or project using different words for the same idea can still be found, with no synonym list to maintain. |
+| How do you choose k? | By measuring: too few blur topics together, all of them gives back GVSM. Here k = 14 to 24 holds steady, so k = 15. |
 
 ---
 
